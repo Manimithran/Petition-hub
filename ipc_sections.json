@@ -11,7 +11,10 @@
     },
     "department": "Police",
     "priority": "High",
-    "suggestion": "Initiate a criminal investigation immediately, secure the crime scene, collect forensic evidence, and arrest the suspect if applicable."
+    "suggestion": {
+      "en": "Initiate a criminal investigation immediately, secure the crime scene, collect forensic evidence, and arrest the suspect if applicable.",
+      "ta": "உடனடியாக ஒரு குற்ற விசாரணையைத் தொடங்கவும், குற்ற இடத்தைப் பாதுகாக்கவும், ஆய்வு சான்றுகளைச் சேகரிக்கவும், பொருந்தினால் சந்தேக நபரைக் கைது செய்யவும்."
+    }
   },
   {
     "section": "307",
@@ -25,7 +28,10 @@
     },
     "department": "Police",
     "priority": "High",
-    "suggestion": "Ensure victim protection, collect witness statements, conduct a forensic investigation, and file necessary charges."
+    "suggestion": {
+      "en": "Ensure victim protection, collect witness statements, conduct a forensic investigation, and file necessary charges.",
+      "ta": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யுங்கள், சாட்சியங்களின் அறிக்கைகளைச் சேகரிக்கவும், ஆய்வு விசாரணையை மேற்கொள்ளவும், தேவையான குற்றச்சாட்டுகளை தாக்கல் செய்யவும்."
+    }
   },
   {
     "section": "323",
@@ -39,7 +45,10 @@
     },
     "department": "Police",
     "priority": "Medium",
-    "suggestion": "Record the victim's statement, document the injuries, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Record the victim's statement, document the injuries, and initiate legal proceedings.",
+      "ta": "பாதிக்கப்பட்டவரின் அறிக்கையைப் பதிவு செய்யுங்கள், காயங்களை ஆவணப்படுத்துங்கள், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "324",
@@ -53,7 +62,10 @@
     },
     "department": "Police",
     "priority": "High",
-    "suggestion": "Secure the weapon, record the victim's statement, document the injuries, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Secure the weapon, record the victim's statement, document the injuries, and initiate legal proceedings.",
+      "ta": "ஆயுதத்தைப் பாதுகாக்கவும், பாதிக்கப்பட்டவரின் அறிக்கையைப் பதிவு செய்யவும், காயங்களை ஆவணப்படுத்தவும், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "354",
@@ -67,7 +79,10 @@
     },
     "department": "Women Protection Cell",
     "priority": "High",
-    "suggestion": "Provide victim counseling, offer legal assistance, ensure police protection, and proceed with the investigation."
+    "suggestion": {
+      "en": "Provide victim counseling, offer legal assistance, ensure police protection, and proceed with the investigation.",
+      "ta": "பாதிக்கப்பட்டவருக்கு ஆலோசனை வழங்கவும், சட்ட உதவியை வழங்கவும், போலீஸ் பாதுகாப்பை உறுதி செய்யவும், மற்றும் விசாரணையைத் தொடரவும்."
+    }
   },
   {
     "section": "376",
@@ -81,7 +96,10 @@
     },
     "department": "Women Protection Cell",
     "priority": "Critical",
-    "suggestion": "Ensure victim protection and confidentiality, conduct medical examination, collect evidence, and proceed with legal action promptly."
+    "suggestion": {
+      "en": "Ensure victim protection and confidentiality, conduct a medical examination, collect evidence, and proceed with legal action promptly.",
+      "ta": "பாதிக்கப்பட்டவரின் பாதுகாப்பு மற்றும் இரகசியத்தை உறுதி செய்யுங்கள், மருத்துவ பரிசோதனையை மேற்கொள்ளுங்கள், ஆதாரங்களைச் சேகரிக்கவும், மற்றும் உடனடியாக சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "379",
@@ -95,7 +113,10 @@
     },
     "department": "Police",
     "priority": "Medium",
-    "suggestion": "Record the victim's statement, investigate the scene, and recover the stolen property if possible."
+    "suggestion": {
+      "en": "Record the victim's statement, investigate the scene, and recover the stolen property if possible.",
+      "ta": "பாதிக்கப்பட்டவரின் அறிக்கையைப் பதிவு செய்யுங்கள், குற்ற இடத்தை விசாரிக்கவும், மற்றும் திருடப்பட்ட சொத்தை மீட்டெடுக்க முடிந்தால் அதைச் செய்யுங்கள்."
+    }
   },
   {
     "section": "406",
@@ -109,7 +130,10 @@
     },
     "department": "Economic Offences Wing",
     "priority": "Medium",
-    "suggestion": "Gather evidence of the breach of trust, track the misappropriated property, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Gather evidence of the breach of trust, track the misappropriated property, and initiate legal proceedings.",
+      "ta": "நம்பிக்கை துரோகத்திற்கான ஆதாரங்களைச் சேகரிக்கவும், தவறாகப் பயன்படுத்தப்பட்ட சொத்தைக் கண்டறியவும், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "420",
@@ -123,7 +147,10 @@
     },
     "department": "Economic Offences Wing",
     "priority": "Medium",
-    "suggestion": "Initiate an investigation, track financial transactions, alert financial institutions, and take legal action."
+    "suggestion": {
+      "en": "Initiate an investigation, track financial transactions, alert financial institutions, and take legal action.",
+      "ta": "விசாரணையைத் தொடங்கவும், நிதி பரிவர்த்தனைகளைக் கண்காணிக்கவும், நிதி நிறுவனங்களுக்கு எச்சரிக்கவும், மற்றும் சட்ட நடவடிக்கைகளை எடுக்கவும்."
+    }
   },
   {
     "section": "144",
@@ -137,7 +164,10 @@
     },
     "department": "Police",
     "priority": "High",
-    "suggestion": "Disperse the unlawful assembly, seize weapons, and arrest the participants."
+    "suggestion": {
+      "en": "Disperse the unlawful assembly, seize weapons, and arrest the participants.",
+      "ta": "சட்டவிரோத கூட்டத்தைக் கலைக்கவும், ஆயுதங்களைப் பறிமுதல் செய்யவும், மற்றும் பங்கேற்பாளர்களைக் கைது செய்யவும்."
+    }
   },
   {
     "section": "294",
@@ -151,7 +181,10 @@
     },
     "department": "Police",
     "priority": "Low",
-    "suggestion": "Issue a warning, and if the behavior continues, initiate legal proceedings."
+    "suggestion": {
+      "en": "Issue a warning, and if the behavior continues, initiate legal proceedings.",
+      "ta": "எச்சரிக்கை விடுங்கள், மற்றும் நடத்தை தொடர்ந்தால், சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "417",
@@ -165,7 +198,10 @@
     },
     "department": "Economic Offences Wing",
     "priority": "Medium",
-    "suggestion": "Gather evidence of the deception, record witness statements, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Gather evidence of the deception, record witness statements, and initiate legal proceedings.",
+      "ta": "ஏமாற்றுவதற்கான ஆதாரங்களைச் சேகரிக்கவும், சாட்சியங்களின் அறிக்கைகளைப் பதிவு செய்யவும், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "465",
@@ -179,7 +215,10 @@
     },
     "department": "Economic Offences Wing",
     "priority": "Medium",
-    "suggestion": "Examine the forged documents, gather forensic evidence, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Examine the forged documents, gather forensic evidence, and initiate legal proceedings.",
+      "ta": "போலி ஆவணங்களைப் பரிசோதிக்கவும், ஆய்வு சான்றுகளைச் சேகரிக்கவும், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   },
   {
     "section": "509",
@@ -193,6 +232,9 @@
     },
     "department": "Women Protection Cell",
     "priority": "Medium",
-    "suggestion": "Record the victim's statement, gather evidence of the insult, and initiate legal proceedings."
+    "suggestion": {
+      "en": "Record the victim's statement, gather evidence of the insult, and initiate legal proceedings.",
+      "ta": "பாதிக்கப்பட்டவரின் அறிக்கையைப் பதிவு செய்யுங்கள், அவமானத்திற்கான ஆதாரங்களைச் சேகரிக்கவும், மற்றும் சட்ட நடவடிக்கைகளைத் தொடங்கவும்."
+    }
   }
   ]
