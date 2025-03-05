@@ -11,6 +11,7 @@ import shutil
 from flask import Flask, request, render_template, redirect, url_for, session, flash, send_file, jsonify
 from sklearn.feature_extraction.text import TfidfVectorizer
 from transformers import BertTokenizer, BertForSequenceClassification
+from langdetect import detect
 from db_connection import check_user_credentials, register_user, initialize_database, save_document_history, get_user_documents, get_document_by_id, get_user_id
 from email_service import send_emails_for_analysis
 
@@ -40,13 +41,13 @@ try:
 except FileNotFoundError:
     ipc_data = []
 
-# Load Pretrained Tamil BERT Model
+# Load Pretrained Multilingual BERT Model
 tokenizer = BertTokenizer.from_pretrained("google/muril-base-cased")  # BERT for Tamil & English
 model = BertForSequenceClassification.from_pretrained("google/muril-base-cased")
 
 # TF-IDF Vectorizer for Machine Learning Analysis
 tfidf_vectorizer = TfidfVectorizer()
-ipc_texts = [section["description"]["en"] for section in ipc_data]  # Extract text for training
+ipc_texts = [section["description"]["en"] + " " + section["description"]["ta"] for section in ipc_data]  # Extract text for training
 tfidf_vectorizer.fit(ipc_texts)  # Fit only once
 
 # Function to Extract Text from Files
@@ -99,8 +100,15 @@ def analyze_petition(petition_text):
     relevant_sections = []
     
     for section in ipc_data:
-        # Check if any keywords are present in the petition
-        keyword_match = any(keyword.lower() in petition_text for keyword in section["keywords"])
+        # Check if any keywords (English or Tamil) are present in the petition
+        english_keywords = section.get("keywords", {}).get("en", [])
+        tamil_keywords = section.get("keywords", {}).get("ta", [])
+        
+        # Check for matches in both English and Tamil keywords
+        keyword_match = (
+            any(keyword.lower() in petition_text for keyword in english_keywords) or
+            any(keyword.lower() in petition_text for keyword in tamil_keywords)
+        )
         
         # If keywords match, add to relevant sections
         if keyword_match:
@@ -181,9 +189,9 @@ def upload():
         
         if user_id:
             success, sent_departments = send_emails_for_analysis(
-                user_id, 
-                original_filename, 
-                permanent_path, 
+                user_id,
+                original_filename,
+                permanent_path,
                 analysis_results
             )
             print(f"Email sending result: {success}, Departments: {sent_departments}")
@@ -192,8 +200,9 @@ def upload():
     
     # Clean up temporary file
     os.remove(temp_path)
-    
-    # Redirect to email notification page if emails were sent
+
+
+     # Redirect to email notification page if emails were sent
     if sent_departments:
         return redirect(url_for("email_notification", doc_id=doc_id, departments=",".join(sent_departments)))
     elif found_departments:
@@ -363,6 +372,3 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-

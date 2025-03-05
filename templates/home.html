@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .filter-sort {
+            margin-bottom: 20px;
+        }
+        .filter-sort label {
+            margin-right: 10px;
+        }
+        .filter-sort select {
+            padding: 5px;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body class="home-body">
     <div class="app-container">
@@ -143,7 +178,54 @@
                             </div>
                         </div>
                         <div class="card-content">
-                            <div class="analysis-results">{{ analysis_results | safe }}</div>
+                            <!-- Updated Analysis Results Section -->
+                            <!-- <div class="filter-sort">
+                                <label for="sort">Sort by:</label>
+                                <select id="sort" onchange="sortTable()">
+                                    <option value="section">Section</option>
+                                    <option value="description">Description</option>
+                                    <option value="department">Department</option>
+                                    <option value="priority">Priority</option>
+                                </select>
+
+                                <label for="filter">Filter by Department:</label>
+                                <select id="filter" onchange="filterTable()">
+                                    <option value="all">All Departments</option>
+                                    <option value="HR">HR</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Operations">Operations</option>
+                                </select>
+                            </div> -->
+
+                            <table id="analysisTable">
+                                <thead>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>Description</th>
+                                        <th>Department</th>
+                                        <th>Priority</th>
+                                        <th>Suggestion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for result in analysis_results %}
+                                        <tr>
+                                            <td>{{ result.section }}</td>
+                                            <td>{{ result.description }}</td>
+                                            <td>{{ result.department }}</td>
+                                            <td>{{ result.priority }}</td>
+                                            <td>{{ result.suggestion }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+
+                            <div class="pagination">
+                                <button onclick="previousPage()">Previous</button>
+                                <span id="pageNumber">1</span>
+                                <button onclick="nextPage()">Next</button>
+                            </div>
                         </div>
                     </div>
                     {% endif %}
@@ -175,7 +257,7 @@
                 }
             });
         }
-
+    
         // Close alert button
         const closeButtons = document.querySelectorAll('.close-alert');
         closeButtons.forEach(button => {
@@ -183,6 +265,80 @@
                 this.parentElement.style.display = 'none';
             });
         });
+    
+        // Sorting, Filtering, and Pagination Scripts
+        let currentPage = 1;
+        const rowsPerPage = 10;
+    
+        function sortTable() {
+            const sortBy = document.getElementById('sort').value;
+            const table = document.getElementById('analysisTable');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+    
+            rows.sort((a, b) => {
+                const aValue = a.querySelector(`td:nth-child(${getIndex(sortBy)})`).textContent;
+                const bValue = b.querySelector(`td:nth-child(${getIndex(sortBy)})`).textContent;
+                return aValue.localeCompare(bValue);
+            });
+    
+            table.querySelector('tbody').innerHTML = '';
+            rows.forEach(row => table.querySelector('tbody').appendChild(row));
+            updatePagination(); // Reset pagination after sorting
+        }
+    
+        function getIndex(sortBy) {
+            switch (sortBy) {
+                case 'section': return 1;
+                case 'description': return 2;
+                case 'department': return 3;
+                case 'priority': return 4;
+                default: return 1;
+            }
+        }
+    
+        function filterTable() {
+            const filterBy = document.getElementById('filter').value;
+            const rows = document.querySelectorAll('#analysisTable tbody tr');
+    
+            rows.forEach(row => {
+                const department = row.querySelector('td:nth-child(3)').textContent;
+                if (filterBy === 'all' || department === filterBy) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        }
+    
+        function nextPage() {
+            const rows = document.querySelectorAll('#analysisTable tbody tr');
+            if (currentPage < Math.ceil(rows.length / rowsPerPage)) {
+                currentPage++;
+                updatePagination();
+            }
+        }
+    
+        function updatePagination() {
+            const rows = document.querySelectorAll('#analysisTable tbody tr');
+            rows.forEach((row, index) => {
+                if (index >= (currentPage - 1) * rowsPerPage && index < currentPage * rowsPerPage) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            document.getElementById('pageNumber').textContent = currentPage;
+        }
+    
+        // Initial pagination setup
+        updatePagination();
     </script>
 </body>
-</html> 
+</html>
