@@ -13,11 +13,7 @@ SENDER_PASSWORD = "LegalSolver@123"
 SMTP_SERVER = "smtp.hostinger.com"
 SMTP_PORT = 465
 
-# For testing purposes, you can set these directly if environment variables are not available
-# But in production, always use environment variables
-# if SENDER_PASSWORD == "your_password":
-#     print("WARNING: Using default email password. Set EMAIL_PASSWORD environment variable for security.")
-
+# Load department emails from JSON file
 def load_department_emails():
     """Load department email IDs from JSON file"""
     try:
@@ -47,11 +43,6 @@ def get_department_email(department_name):
 
 def send_email(recipient_email, subject, body, attachment_path=None):
     """Send email with optional attachment"""
-    # Check if email credentials are set
-    # if SENDER_PASSWORD == "your_password":
-    #     print("ERROR: Default email password is being used. Set EMAIL_PASSWORD environment variable.")
-    #     return False
-        
     message = MIMEMultipart()
     message["From"] = SENDER_EMAIL
     message["To"] = recipient_email
@@ -119,10 +110,13 @@ def create_department_email_body(user_name, document_name, analysis_results, dep
     """
     
     for section in relevant_sections:
+        # Use the display_description field if it exists, otherwise fall back to English description
+        description = section.get("display_description", section.get("description", {}).get("en", ""))
+        
         html += f"""
             <div class="section">
                 <p><b>Section {section.get('section')}</b> - Priority: {section.get('priority')}</p>
-                <p>{section.get('description', {}).get('en', '')}</p>
+                <p>{description}</p>
                 <p><b>Suggested Action:</b> {section.get('suggestion', '')}</p>
             </div>
         """
@@ -257,4 +251,4 @@ def send_emails_for_analysis(user_id, document_name, file_path, analysis_results
             print(f"Error sending acknowledgment email to user: {e}")
     
     print(f"Email process completed. Sent to departments: {sent_departments}")
-    return bool(sent_departments), sent_departments 
+    return bool(sent_departments), sent_departments

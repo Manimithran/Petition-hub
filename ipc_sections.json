@@ -1,198 +1,267 @@
 [
   {
-    "section": "302",
+  "section": "307",
+  "keywords": {
+    "en": ["Attempt to Murder", "Crime", "Punishment", "Assault", "Harm"],
+    "ta": ["கொலை முயற்சி", "குற்றம்", "தண்டனை", "தாக்குதல்", "காயம்"]
+  },
+  "desc_eng": "Attempt to Murder: If a person attempts to commit murder and causes harm, they shall be punished with imprisonment up to 10 years and shall also be liable to a fine. If hurt is caused, imprisonment may extend to life.",
+  "desc_tam": "கொலை முயற்சி: ஒருவர் கொலை செய்ய முயற்சி செய்து காயம் ஏற்படுத்தினால், அவருக்கு 10 ஆண்டு வரை சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும். காயம் ஏற்பட்டால், ஆயுள் தண்டனை வழங்கப்படலாம்.",
+  "department": "Police",
+  "priority": "High",
+  "sug_eng": "Register an FIR, conduct an immediate investigation, collect forensic and medical evidence, and ensure the suspect is taken into custody if required.",
+  "sug_tam": "FIR பதிவு செய்யவும், உடனடி விசாரணை நடத்தவும், மருத்துவ மற்றும் ஆய்வு சான்றுகள் சேகரிக்கவும், தேவைப்பட்டால் சந்தேக நபரைக் காவலில் எடுக்கவும்."
+},
+{
+  "section": "323",
+  "keywords": {
+    "en": ["Hurt", "Assault", "Crime", "Punishment", "Injury"],
+    "ta": ["காயம்", "தாக்குதல்", "குற்றம்", "தண்டனை", "சீண்டு"]
+  },
+  "desc_eng": "Punishment for Voluntarily Causing Hurt: Whoever voluntarily causes hurt shall be punished with imprisonment up to 1 year, or with a fine up to ₹1,000, or both.",
+  "desc_tam": "தன்னிச்சையாக காயம் ஏற்படுத்தியதற்கான தண்டனை: ஒருவர் தன்னிச்சையாக மற்றொருவருக்கு காயம் ஏற்படுத்தினால், அவருக்கு 1 ஆண்டு வரை சிறைத்தண்டனை அல்லது ₹1,000 வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "Medium",
+  "sug_eng": "Register a complaint, collect medical reports, record witness statements, and initiate legal proceedings if applicable.",
+  "sug_tam": "முறைப்பாடு பதிவு செய்யவும், மருத்துவ அறிக்கைகள் சேகரிக்கவும், சாட்சிகளின் வாக்குமூலங்களை பதிவு செய்யவும், தேவையான சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+
+{
+  "section": "375",
+  "keywords": {
+    "en": ["Rape", "Sexual Assault", "Crime", "Punishment", "Protection"],
+    "ta": ["மூலாதார வன்முறை", "பாலியல் தாக்குதல்", "குற்றம்", "தண்டனை", "பாதுகாப்பு"]
+  },
+  "desc_eng": "Rape: A person commits rape if they engage in sexual intercourse with a woman without her consent, by force, coercion, fraud, or when she is incapable of giving consent.",
+  "desc_tam": "மூலாதார வன்முறை: ஒரு நபர், ஒரு பெண்மீது அவருடைய சம்மதமின்றி, கட்டாயமாக, மிரட்டல் மூலம், மோசடியில், அல்லது சம்மதம் அளிக்க இயலாத நிலையில் பாலியல் உறவில் ஈடுபட்டால், அது வன்முறை எனப் பொருள் கொள்ளப்படும்.",
+  "department": "Police",
+  "priority": "High",
+  "sug_eng": "Immediately provide medical aid to the survivor, register an FIR, collect forensic evidence, and ensure the suspect is arrested and prosecuted.",
+  "sug_tam": "உடனடியாக பாதிக்கப்பட்டவருக்கு மருத்துவ உதவி வழங்கவும், FIR பதிவு செய்யவும், ஆய்வுப் பொருள்கள் சேகரிக்கவும், சந்தேக நபரை கைது செய்து வழக்கை தொடரவும்."
+},
+
+{
+  "section": "420",
+  "keywords": {
+    "en": ["Cheating", "Fraud", "Crime", "Punishment", "Deception"],
+    "ta": ["மோசடி", "ஏமாற்றம்", "குற்றம்", "தண்டனை", "வஞ்சகம்"]
+  },
+  "desc_eng": "Cheating and Dishonest Inducement of Property: If a person cheats another and dishonestly induces them to deliver property, they shall be punished with imprisonment up to 7 years and a fine.",
+  "desc_tam": "மோசடி மற்றும் வஞ்சகமாக சொத்து பெற்றல்: ஒருவர் மற்றொருவரை மோசடி செய்து, அவருடைய சொத்துகளை வஞ்சகமாக பெற்றால், அவருக்கு 7 ஆண்டு வரை சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "Medium",
+  "sug_eng": "File an FIR, analyze financial records, gather evidence, and take necessary legal action to recover the victim’s property.",
+  "sug_tam": "FIR பதிவு செய்யவும், நிதி பதிவுகளை ஆய்வு செய்யவும், ஆதாரங்களை சேகரிக்கவும், பாதிக்கப்பட்டவரின் சொத்தை மீட்பதற்கான சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+
+{
+  "section": "498A",
+  "keywords": {
+    "en": ["Cruelty", "Domestic Violence", "Husband", "Harassment", "Dowry"],
+    "ta": ["கொடுமை", "இல்லற வன்முறை", "கணவன்", "துன்புறுத்தல்", "நல்கொடை"]
+  },
+  "desc_eng": "Cruelty by Husband or Relatives: If a husband or his relatives subject a woman to cruelty or harassment for dowry, they shall be punished with imprisonment up to 3 years and a fine.",
+  "desc_tam": "கணவன் அல்லது அவரது உறவினர்களால் கொடுமை: கணவன் அல்லது அவரது உறவினர்கள், ஒரு பெண்மீது கொடுமை அல்லது துன்புறுத்தலை நல்கொடை காரணமாக ஏற்படுத்தினால், அவர்களுக்கு 3 ஆண்டு வரை சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்.",
+  "department": "Women’s Safety & Police",
+  "priority": "High",
+  "sug_eng": "Ensure the victim's safety, register a complaint, provide counseling support, and take legal action against the accused.",
+  "sug_tam": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், புகார் பதிவு செய்யவும், ஆலோசனை உதவியை வழங்கவும், குற்றவாளிகளுக்கு எதிராக சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "506",
+  "keywords": {
+    "en": ["Threat", "Intimidation", "Crime", "Punishment", "Fear"],
+    "ta": ["மிரட்டல்", "அச்சுறுத்தல்", "குற்றம்", "தண்டனை", "பயம்"]
+  },
+  "desc_eng": "Criminal Intimidation: Whoever threatens another with injury to their person, reputation, or property with the intent to cause alarm shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+  "desc_tam": "குற்றவியல் அச்சுறுத்தல்: ஒருவர் மற்றொருவரை அவருடைய உடல், புகழ், அல்லது சொத்துக்கு தீங்கு விளைவிக்கும் நோக்குடன் மிரட்டினால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "Medium",
+  "sug_eng": "Record the complaint, collect evidence of threats, ensure the victim’s safety, and take necessary legal measures.",
+  "sug_tam": "புகார் பதிவு செய்யவும், மிரட்டலின் ஆதாரங்களை சேகரிக்கவும், பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், தேவையான சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "354",
+  "keywords": {
+    "en": ["Assault", "Women Safety", "Crime", "Outrage Modesty", "Harassment"],
+    "ta": ["தாக்குதல்", "பெண்கள் பாதுகாப்பு", "குற்றம்", "அவமானம்", "துன்புறுத்தல்"]
+  },
+  "desc_eng": "Whoever assaults or uses criminal force on a woman with the intention of outraging her modesty shall be punished with imprisonment from 1 to 5 years and a fine.",
+  "desc_tam": "ஒருவர் ஒரு பெண்மீது தாக்குதல் அல்லது குற்றவியல் வன்முறையை நிகழ்த்தி, அவளுடைய மதிப்பை அவமானப்படுத்தும் நோக்கத்தில் இருந்தால், அவருக்கு 1 முதல் 5 ஆண்டு வரை சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்.",
+  "department": "Women’s Safety & Police",
+  "priority": "High",
+  "sug_eng": "Ensure the victim’s safety, record statements, collect CCTV footage if available, and take legal action.",
+  "sug_tam": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், வாக்குமூலங்களை பதிவு செய்யவும், சிசிடிவி காட்சிகள் இருந்தால் சேகரிக்கவும், சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "379",
+  "keywords": {
+    "en": ["Theft", "Stealing", "Crime", "Punishment", "Robbery"],
+    "ta": ["திருட்டு", "கொள்ளை", "குற்றம்", "தண்டனை", "மோசடி"]
+  },
+  "desc_eng": "Whoever commits theft shall be punished with imprisonment up to 3 years, or with a fine, or both.",
+  "desc_tam": "ஒருவர் திருட்டு செய்தால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "Medium",
+  "sug_eng": "Register an FIR, collect evidence, identify the suspect, and recover stolen property if possible.",
+  "sug_tam": "FIR பதிவு செய்யவும், ஆதாரங்களை சேகரிக்கவும், சந்தேக நபரை அடையாளம் காணவும், திருடப்பட்ட சொத்துகளை மீட்க முயற்சிக்கவும்."
+},
+{
+  "section": "447",
+  "keywords": {
+    "en": ["Trespassing", "Illegal Entry", "Crime", "Punishment", "Land Dispute"],
+    "ta": ["தன்னிச்சையான நுழைவு", "சட்டவிரோத நுழைவு", "குற்றம்", "தண்டனை", "நில விவகாரம்"]
+  },
+  "desc_eng": "Whoever commits criminal trespass shall be punished with imprisonment up to 3 months, or with a fine up to ₹500, or both.",
+  "desc_tam": "ஒருவர் சட்ட விரோதமாக மற்றவருடைய சொத்திற்குள் நுழைந்தால், அவருக்கு 3 மாதம் வரை சிறைத்தண்டனை அல்லது ₹500 வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "Low",
+  "sug_eng": "Register a complaint, verify ownership, record witness statements, and take legal action if necessary.",
+  "sug_tam": "புகார் பதிவு செய்யவும், சொந்த உரிமையை சரிபார்க்கவும், சாட்சிகள் வாக்குமூலங்களை பதிவு செய்யவும், தேவையான சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "509",
+  "keywords": {
+    "en": ["Insult", "Women Safety", "Crime", "Eve-teasing", "Harassment"],
+    "ta": ["அவமானம்", "பெண்கள் பாதுகாப்பு", "குற்றம்", "துன்புறுத்தல்", "மோசடி"]
+  },
+  "desc_eng": "Whoever utters words, makes gestures, or exhibits acts intended to insult a woman’s modesty shall be punished with imprisonment up to 3 years and a fine.",
+  "desc_tam": "ஒருவர் வார்த்தைகள் அல்லது சைகைகள் மூலம் பெண்மீது அவமானம் விளைவிக்க முற்பட்டால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்.",
+  "department": "Women’s Safety & Police",
+  "priority": "High",
+  "sug_eng": "Record the complaint, collect witness statements, check for CCTV evidence, and take immediate legal action.",
+  "sug_tam": "புகார் பதிவு செய்யவும், சாட்சிகள் வாக்குமூலங்களை சேகரிக்கவும், சிசிடிவி ஆதாரங்கள் இருந்தால் ஆய்வு செய்யவும், உடனடியாக சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "34",
+  "keywords": {
+    "en": ["Common Intention", "Group Crime", "Conspiracy", "Punishment", "Legal Action"],
+    "ta": ["கூட்டு நோக்கம்", "குழு குற்றம்", "சதித்திட்டம்", "தண்டனை", "சட்ட நடவடிக்கை"]
+  },
+  "desc_eng": "When a criminal act is done by several persons with a common intention, each person shall be held equally liable as if they had committed it alone.",
+  "desc_tam": "ஒரே நோக்குடன் பலர் இணைந்து குற்ற செயல்களை செய்தால், ஒவ்வொருவரும் தனியாக செய்ததைப்போல் சட்ட ரீதியாக பொறுப்பேற்க வேண்டும்.",
+  "department": "Police",
+  "priority": "Medium",
+  "sug_eng": "Identify all accused persons, collect evidence of conspiracy, record witness statements, and proceed with legal action.",
+  "sug_tam": "எல்லா குற்றவாளிகளையும் அடையாளம் காணவும், சதித்திட்டத்தின் ஆதாரங்களை சேகரிக்கவும், சாட்சிகள் வாக்குமூலங்களை பதிவு செய்யவும், சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+  "section": "511",
+  "keywords": {
+    "en": ["Attempt", "Crime", "Punishment", "Legal Action", "Unsuccessful Offense"],
+    "ta": ["முயற்சி", "குற்றம்", "தண்டனை", "சட்ட நடவடிக்கை", "தவறிய குற்றம்"]
+  },
+  "desc_eng": "Whoever attempts to commit an offense punishable with life imprisonment or death shall be punished with imprisonment up to half of the maximum prescribed punishment.",
+  "desc_tam": "ஒருவர் ஆயுள் தண்டனை அல்லது மரண தண்டனை விதிக்கப்படும் குற்றங்களை செய்ய முயன்றால், அவருக்கு அந்த குற்றத்திற்கு விதிக்கப்பட்ட அதிகபட்ச தண்டனையின் பாதியளவு சிறைத்தண்டனை விதிக்கப்படும்.",
+  "department": "Police",
+  "priority": "High",
+  "sug_eng": "Investigate the attempt, gather evidence, prevent further harm, and take legal action against the accused.",
+  "sug_tam": "முயற்சியை விசாரிக்கவும், ஆதாரங்களை சேகரிக்கவும், மேலும் தீங்கு விளையாததை உறுதி செய்யவும், குற்றவாளியை எதிர்த்து சட்ட நடவடிக்கைகளை மேற்கொள்ளவும்."
+},
+{
+    "section": "144",
     "keywords": {
-      "en": ["Murder", "Homicide", "Killing", "Crime", "Punishment"],
-      "ta": ["கொலை", "கொலைக்குற்றம்", "குற்றம்", "தண்டனை"]
+      "en": ["Unlawful Assembly", "Public Order", "Gathering", "Crime", "Restriction"],
+      "ta": ["சட்டவிரோத கூட்டம்", "பொது ஒழுங்கு", "கூட்டம்", "குற்றம்", "கட்டுப்பாடு"]
     },
-    "description": {
-      "en": "Punishment for Murder: If a person commits murder, they shall be punished with death or life imprisonment and shall also be liable to a fine.",
-      "ta": "கொலைக்கான தண்டனை: ஒருவர் கொலை செய்தால், அவருக்கு மரண தண்டனை அல்லது ஆயுள் தண்டனை வழங்கப்படும் மேலும் அபராதம் விதிக்கப்படும்."
-    },
-    "department": "Police",
+    "desc_eng": "Unlawful Assembly: Assembly of five or more persons with a common object to commit an offense or disturb public peace.",
+    "desc_tam": "சட்டவிரோத கூட்டம்: பொது அமைதியை சீர்குலைக்கும் அல்லது குற்றம் புரியும் பொது நோக்கத்துடன் ஐந்து அல்லது அதற்கு மேற்பட்ட நபர்கள் ஒன்று கூடுவது.",
+    "department": "Police/Magistrate",
     "priority": "High",
-    "suggestion": "Initiate a criminal investigation immediately, secure the crime scene, collect forensic evidence, and arrest the suspect if applicable."
+    "sug_eng": "Issue prohibitory orders, disperse the assembly, and take legal action against the participants.",
+    "sug_tam": "தடை உத்தரவுகளை பிறப்பிக்கவும், கூட்டத்தை கலைக்கவும், பங்கேற்பாளர்களுக்கு எதிராக சட்ட நடவடிக்கை எடுக்கவும்."
   },
   {
-    "section": "307",
+    "section": "124A",
     "keywords": {
-      "en": ["Attempt to Murder", "Assault", "Deadly Attack", "Criminal Intent", "Injury"],
-      "ta": ["கொலை முயற்சி", "தாக்குதல்", "கொலை நோக்கம்", "காயம்"]
+      "en": ["Sedition", "Government", "Disaffection", "Crime", "National Security"],
+      "ta": ["தேசத்துரோகம்", "அரசாங்கம்", "அதிருப்தி", "குற்றம்", "தேசிய பாதுகாப்பு"]
     },
-    "description": {
-      "en": "Attempt to commit Murder: If a person attempts to murder someone and the act results in grievous harm, they shall be punished with imprisonment up to ten years or life, along with a fine.",
-      "ta": "கொலை செய்ய முயற்சி: ஒருவர் கொலை செய்ய முயற்சி செய்தால் மற்றும் அது கடுமையான சேதத்தை ஏற்படுத்தினால், அவருக்கு பத்து ஆண்டுகள் அல்லது ஆயுள் சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்."
-    },
+    "desc_eng": "Sedition: Words, signs, or visible representation that bring or attempt to bring into hatred or contempt, or excite or attempt to excite disaffection towards the Government.",
+    "desc_tam": "தேசத்துரோகம்: அரசாங்கத்திற்கு எதிராக வெறுப்பை அல்லது அவமதிப்பை தூண்டும் அல்லது அதிருப்தியை தூண்ட முயற்சிக்கும் வார்த்தைகள், அறிகுறிகள் அல்லது காணக்கூடிய பிரதிநிதித்துவம்.",
     "department": "Police",
     "priority": "High",
-    "suggestion": "Ensure victim protection, collect witness statements, conduct a forensic investigation, and file necessary charges."
+    "sug_eng": "Register an FIR, collect evidence, and initiate legal proceedings against the accused.",
+    "sug_tam": "FIR பதிவு செய்யவும், ஆதாரங்களை சேகரிக்கவும், குற்றவாளிக்கு எதிராக சட்ட நடவடிக்கைகளை தொடங்கவும்."
   },
   {
-    "section": "323",
+    "section": "295A",
     "keywords": {
-      "en": ["Voluntarily causing hurt", "Hurt", "Injury", "Assault", "Violence"],
-      "ta": ["வேண்டுமென்றே காயப்படுத்துதல்", "காயம்", "தாக்குதல்", "வன்முறை"]
+      "en": ["Religious Feelings", "Insult", "Deliberate Act", "Crime", "Harmony"],
+      "ta": ["மத உணர்வுகள்", "அவமதிப்பு", "வேண்டுமென்றே செயல்", "குற்றம்", "நல்லிணக்கம்"]
     },
-    "description": {
-      "en": "Punishment for voluntarily causing hurt: Whoever, except in the case provided for by section 334, voluntarily causes hurt, shall be punished with imprisonment of either description for a term which may extend to one year, or with fine which may extend to one thousand rupees, or with both.",
-      "ta": "தானாக முன்வந்து காயப்படுத்தினால் தண்டனை: 334 வது பிரிவால் வழங்கப்பட்ட வழக்கை தவிர, தானாக முன்வந்து காயப்படுத்துபவர், ஒரு வருடம் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது ஆயிரம் ரூபாய் வரை நீட்டிக்கக்கூடிய அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
+    "desc_eng": "Deliberate and malicious acts intended to outrage religious feelings of any class by insulting its religion or religious beliefs.",
+    "desc_tam": "எந்தவொரு வகுப்பினரின் மத உணர்வுகளையும் அதன் மதம் அல்லது மத நம்பிக்கைகளை அவமதிப்பதன் மூலம் வேண்டுமென்றே மற்றும் தீங்கிழைக்கும் செயல்கள்.",
     "department": "Police",
+    "priority": "High",
+    "sug_eng": "Register a complaint, collect evidence, and take legal action to maintain communal harmony.",
+    "sug_tam": "புகார் பதிவு செய்யவும், ஆதாரங்களை சேகரிக்கவும், வகுப்புவாத நல்லிணக்கத்தை பராமரிக்க சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "494",
+    "keywords": {
+      "en": ["Bigamy", "Marriage", "Crime", "Legal Offense", "Second Marriage"],
+      "ta": ["இருதார மணம்", "திருமணம்", "குற்றம்", "சட்ட மீறல்", "இரண்டாவது திருமணம்"]
+    },
+    "desc_eng": "Bigamy: Marrying again during the lifetime of a husband or wife, without a valid divorce.",
+    "desc_tam": "இருதார மணம்: செல்லுபடியாகும் விவாகரத்து இல்லாமல், கணவன் அல்லது மனைவி உயிருடன் இருக்கும்போது மீண்டும் திருமணம் செய்வது.",
+    "department": "Police/Family Court",
     "priority": "Medium",
-    "suggestion": "Record the victim's statement, document the injuries, and initiate legal proceedings."
+    "sug_eng": "Register a complaint, verify marriage records, and initiate legal proceedings.",
+    "sug_tam": "புகார் பதிவு செய்யவும், திருமண பதிவுகளை சரிபார்க்கவும், சட்ட நடவடிக்கைகளை தொடங்கவும்."
   },
-  {
-    "section": "324",
+    {
+    "section": "499",
     "keywords": {
-      "en": ["Voluntarily causing hurt by dangerous weapons or means", "Hurt", "Weapons", "Injury", "Assault"],
-      "ta": ["ஆபத்தான ஆயுதங்கள் மூலம் காயப்படுத்துதல்", "காயம்", "ஆயுதங்கள்", "தாக்குதல்"]
+      "en": ["Defamation", "Reputation", "Insult", "Crime", "Statement"],
+      "ta": ["அவதூறு", "நற்பெயர்", "அவமானம்", "குற்றம்", "கூற்று"]
     },
-    "description": {
-      "en": "Voluntarily causing hurt by dangerous weapons or means: Whoever, except in the case provided for by section 334, voluntarily causes hurt by means of any instrument for shooting, stabbing or cutting, or any instrument which, used as a weapon of offence, is likely to cause death, or by means of fire or any heated substance, or by means of any poison or any corrosive substance, or by means of any explosive substance, or by means of any substance which it is deleterious to the human body to inhale, to swallow, or to receive into the blood, or by means of any animal, shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
-      "ta": "ஆபத்தான ஆயுதங்கள் அல்லது வழிகள் மூலம் காயப்படுத்துதல்: 334 வது பிரிவால் வழங்கப்பட்ட வழக்கை தவிர, சுடுதல், குத்துதல் அல்லது வெட்டுதல் ஆகியவற்றிற்கான எந்தவொரு கருவியின் மூலமாகவோ அல்லது ஒரு குற்ற ஆயுதமாகப் பயன்படுத்தப்படும் எந்தவொரு கருவியின் மூலமாகவோ இறப்பை ஏற்படுத்தக்கூடிய வாய்ப்பு உள்ளது, அல்லது நெருப்பு அல்லது சூடான பொருள் மூலமாகவோ, அல்லது விஷம் அல்லது அரிக்கும் பொருள் மூலமாகவோ, அல்லது வெடிக்கும் பொருள் மூலமாகவோ, அல்லது மனித உடலுக்கு தீங்கு விளைவிக்கும் எந்தவொரு பொருள் மூலமாகவோ, அல்லது எந்தவொரு விலங்கின் மூலமாகவோ காயப்படுத்துபவர், மூன்று ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Police",
-    "priority": "High",
-    "suggestion": "Secure the weapon, record the victim's statement, document the injuries, and initiate legal proceedings."
-  },
-  {
-    "section": "354",
-    "keywords": {
-      "en": ["Molestation", "Sexual Assault", "Harassment", "Women Protection", "Indecent Act"],
-      "ta": ["பாலியல் துன்புறுத்தல்", "பாலியல் தாக்குதல்", "பெண்கள் பாதுகாப்பு", "ஆபாச செயல்"]
-    },
-    "description": {
-      "en": "Assault or criminal force to woman with intent to outrage her modesty: Any act of sexual harassment, molestation, or use of force against a woman is punishable with imprisonment of up to two years and/or a fine.",
-      "ta": "பெண் சலுகையை பழுதுபடுத்த குற்றமாகத் தாக்குதல்: பெண்களை எதிராக நடக்கும் எந்தவொரு பாலியல் தொந்தரவு, துன்புறுத்தல் அல்லது தாக்குதலும் இரண்டு ஆண்டுகள் வரையிலான சிறைத்தண்டனை மற்றும் அபராதத்திற்குட்பட்டதாகும்."
-    },
-    "department": "Women Protection Cell",
-    "priority": "High",
-    "suggestion": "Provide victim counseling, offer legal assistance, ensure police protection, and proceed with the investigation."
-  },
-  {
-    "section": "376",
-    "keywords": {
-      "en": ["Rape", "Sexual Violence", "Assault", "Criminal Offense", "Victim Support"],
-      "ta": ["வன்புணர்வு", "பாலியல் வன்முறை", "தாக்குதல்", "குற்றம்", "பாதிக்கப்பட்டவருக்கு ஆதரவு"]
-    },
-    "description": {
-      "en": "Punishment for Rape: If a person commits rape, they shall be punished with rigorous imprisonment for a term of not less than ten years, which may extend to life, along with a fine.",
-      "ta": "வன்புணர்வுக்கான தண்டனை: ஒருவர் வன்புணர்வு செய்தால், அவருக்கு குறைந்தது பத்து ஆண்டுகள் முதல் ஆயுள் தண்டனை மற்றும் அபராதம் விதிக்கப்படும்."
-    },
-    "department": "Women Protection Cell",
-    "priority": "Critical",
-    "suggestion": "Ensure victim protection and confidentiality, conduct medical examination, collect evidence, and proceed with legal action promptly."
-  },
-  {
-    "section": "379",
-    "keywords": {
-      "en": ["Theft", "Stealing", "Robbery", "Property Crime", "Larceny"],
-      "ta": ["திருட்டு", "திருடுதல்", "கொள்ளை", "சொத்து குற்றம்"]
-    },
-    "description": {
-      "en": "Punishment for theft: Whoever commits theft shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
-      "ta": "திருட்டுக்கான தண்டனை: திருட்டு செய்பவர், மூன்று ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Police",
+    "desc_eng": "Defamation: Imputation concerning any person intending to harm, or knowing or having reason to believe that such imputation will harm, the reputation of such person.",
+    "desc_tam": "அவதூறு: ஒரு நபரின் நற்பெயருக்கு தீங்கு விளைவிக்கும் நோக்கில் அல்லது தீங்கு விளைவிக்கும் என்று தெரிந்தும் அல்லது நம்புவதற்கு காரணமான எந்தவொரு நபரைப் பற்றியும் கூறுதல்.",
+    "department": "Police/Court",
     "priority": "Medium",
-    "suggestion": "Record the victim's statement, investigate the scene, and recover the stolen property if possible."
+    "sug_eng": "File a complaint, collect evidence of defamatory statements, and pursue legal action.",
+    "sug_tam": "புகார் தாக்கல் செய்யவும், அவதூறு அறிக்கைகளின் ஆதாரங்களை சேகரிக்கவும் மற்றும் சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+    {
+    "section": "363",
+    "keywords": {
+      "en": ["Kidnapping", "Abduction", "Crime", "Child Protection", "Illegal Detention"],
+      "ta": ["கடத்தல்", "கட்டாயமாக கடத்துதல்", "குற்றம்", "குழந்தை பாதுகாப்பு", "சட்டவிரோத தடுப்பு"]
+    },
+    "desc_eng": "Kidnapping: Kidnapping from lawful guardianship.",
+    "desc_tam": "கடத்தல்: சட்டப்பூர்வமான பாதுகாவலரிடமிருந்து கடத்தல்.",
+    "department": "Police",
+    "priority": "High",
+    "sug_eng": "Register an FIR, initiate immediate investigation, and secure the safe return of the victim.",
+    "sug_tam": "FIR பதிவு செய்யவும், உடனடி விசாரணையை தொடங்கவும், பாதிக்கப்பட்டவரின் பாதுகாப்பான திரும்பலை உறுதி செய்யவும்."
+  },
+  {
+    "section": "392",
+    "keywords": {
+      "en": ["Robbery", "Theft", "Violence", "Crime", "Property"],
+      "ta": ["கொள்ளை", "திருட்டு", "வன்முறை", "குற்றம்", "சொத்து"]
+    },
+    "desc_eng": "Robbery: Theft with use of force or threat of force.",
+    "desc_tam": "கொள்ளை: வன்முறை அல்லது வன்முறை மிரட்டல் மூலம் திருட்டு.",
+    "department": "Police",
+    "priority": "High",
+    "sug_eng": "Register an FIR, gather evidence, and apprehend the culprits immediately.",
+    "sug_tam": "FIR பதிவு செய்யவும், ஆதாரங்களை சேகரிக்கவும், குற்றவாளிகளை உடனடியாக கைது செய்யவும்."
   },
   {
     "section": "406",
     "keywords": {
-      "en": ["Criminal breach of trust", "Trust", "Property", "Misappropriation", "Fraud"],
-      "ta": ["நம்பிக்கை துரோகம்", "நம்பிக்கை", "சொத்து", "தவறாகப் பயன்படுத்துதல்", "மோசடி"]
+      "en": ["Criminal Breach of Trust", "Misappropriation", "Fraud", "Crime", "Property"],
+      "ta": ["நம்பிக்கை மோசடி", "முறைகேடு", "மோசடி", "குற்றம்", "சொத்து"]
     },
-    "description": {
-      "en": "Punishment for criminal breach of trust: Whoever commits criminal breach of trust shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
-      "ta": "நம்பிக்கை துரோகத்திற்கான தண்டனை: நம்பிக்கை துரோகம் செய்பவர், மூன்று ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Economic Offences Wing",
+    "desc_eng": "Criminal Breach of Trust: Dishonest misappropriation or conversion of property entrusted.",
+    "desc_tam": "நம்பிக்கை மோசடி: ஒப்படைக்கப்பட்ட சொத்தை நேர்மையற்ற முறையில் முறைகேடு செய்தல் அல்லது மாற்றுதல்.",
+    "department": "Police/Financial Crime Unit",
     "priority": "Medium",
-    "suggestion": "Gather evidence of the breach of trust, track the misappropriated property, and initiate legal proceedings."
-  },
-  {
-    "section": "420",
-    "keywords": {
-      "en": ["Fraud", "Cheating", "Scam", "Financial Crime", "Deception"],
-      "ta": ["மோசடி", "ஏமாற்றுதல்", "மோசடித் திட்டம்", "நிதி குற்றம்", "வஞ்சகம்"]
-    },
-    "description": {
-      "en": "Cheating and dishonestly inducing delivery of property: Whoever cheats and induces another person to deliver property through fraudulent means shall be punished with imprisonment up to seven years and a fine.",
-      "ta": "சம்பாத்தியதை மோசடியாக வாங்குதல்: ஒருவர் மற்றவரை மோசடியாக ஏமாற்றி சொத்துகளை பெற்றால், அவருக்கு ஏழு ஆண்டுகள் வரையிலான சிறைத்தண்டனை மற்றும் அபராதம் விதிக்கப்படும்."
-    },
-    "department": "Economic Offences Wing",
-    "priority": "Medium",
-    "suggestion": "Initiate an investigation, track financial transactions, alert financial institutions, and take legal action."
-  },
-  {
-    "section": "144",
-    "keywords": {
-      "en": ["Unlawful assembly", "Rioting", "Public disturbance", "Order", "Crowd control"],
-      "ta": ["சட்டவிரோத கூட்டம்", "கலவரம்", "பொது அமைதிக்கு இடையூறு", "ஆணை", "கூட்டத்தை கட்டுப்படுத்துதல்"]
-    },
-    "description": {
-      "en": "Joining unlawful assembly armed with deadly weapon: Whoever, being armed with any deadly weapon, or with anything which, used as a weapon of offence, is likely to cause death or grievous hurt, joins or continues in an assembly of five or more persons, which assembly is likely to cause a disturbance of the public peace, knowing that such assembly has been commanded to disperse, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.",
-      "ta": "கொடிய ஆயுதங்களுடன் சட்டவிரோத கூட்டத்தில் சேருதல்: யாரேனும் கொடிய ஆயுதத்துடன் அல்லது குற்ற ஆயுதமாகப் பயன்படுத்தப்படும் எதையும், இறப்பு அல்லது கடுமையான காயத்தை ஏற்படுத்தக்கூடிய வாய்ப்புள்ள எதையும் ஏந்தி, ஐந்து அல்லது அதற்கு மேற்பட்ட நபர்களின் கூட்டத்தில் சேர்ந்தால் அல்லது தொடர்ந்தால், அத்தகைய கூட்டம் பொது அமைதிக்கு இடையூறு விளைவிக்கும் வாய்ப்புள்ளது என்பதை அறிந்து, அத்தகைய கூட்டத்தை கலைக்க உத்தரவிடப்பட்டுள்ளது, அவர் இரண்டு ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Police",
-    "priority": "High",
-    "suggestion": "Disperse the unlawful assembly, seize weapons, and arrest the participants."
-  },
-  {
-    "section": "294",
-    "keywords": {
-      "en": ["Obscene acts", "Songs", "Public nuisance", "Indecency", "Vulgarity"],
-      "ta": ["ஆபாச செயல்கள்", "பாடல்கள்", "பொது தொந்தரவு", "ஆபாசம்", "ஆபாசமான"]
-    },
-    "description": {
-      "en": "Obscene acts and songs: Whoever, to the annoyance of others—(a) does any obscene act in any public place, or (b) sings, recites or utters any obscene song, ballad or words, in or near any public place, shall be punished with imprisonment of either description for a term which may extend to three months, or with fine, or with both.",
-      "ta": "ஆபாச செயல்கள் மற்றும் பாடல்கள்: மற்றவர்களின் எரிச்சலுக்கு யாரேனும் - (அ) எந்தவொரு பொது இடத்திலும் ஆபாசமான செயலைச் செய்தால், அல்லது (ஆ) எந்தவொரு பொது இடத்திலும் அல்லது அதற்கு அருகிலும் ஆபாசமான பாடல், பாலாட் அல்லது வார்த்தைகளை பாடினால், ஓதினால் அல்லது உச்சரித்தால், அவர் மூன்று மாதங்கள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Police",
-    "priority": "Low",
-    "suggestion": "Issue a warning, and if the behavior continues, initiate legal proceedings."
-  },
-  {
-    "section": "417",
-    "keywords": {
-      "en": ["Cheating", "Deception", "Fraud", "Misrepresentation", "Dishonesty"],
-      "ta": ["ஏமாற்றுதல்", "வஞ்சகம்", "மோசடி", "தவறான பிரதிநிதித்துவம்", "நேர்மையின்மை"]
-    },
-    "description": {
-      "en": "Punishment for cheating: Whoever cheats shall be punished with imprisonment of either description for a term which may extend to one year, or with fine, or with both.",
-      "ta": "ஏமாற்றுவதற்கான தண்டனை: யாரேனும் ஏமாற்றினால், அவர் ஒரு வருடம் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Economic Offences Wing",
-    "priority": "Medium",
-    "suggestion": "Gather evidence of the deception, record witness statements, and initiate legal proceedings."
-  },
-  {
-    "section": "465",
-    "keywords": {
-      "en": ["Forgery", "Counterfeiting", "Falsification", "Documents", "Fraudulent"],
-      "ta": ["போலி ஆவணம்", "போலி பணிகள்", "தவறான ஆவணம்", "ஆவணங்கள்", "மோசடி"]
-    },
-    "description": {
-      "en": "Punishment for forgery: Whoever commits forgery shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.",
-      "ta": "போலியான ஆவணங்களுக்கான தண்டனை: யாரேனும் போலி ஆவணங்களைத் தயாரித்தால், அவர் இரண்டு ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு அல்லது அபராதத்துடன் அல்லது இரண்டும் சேர்த்து தண்டிக்கப்படுவார்."
-    },
-    "department": "Economic Offences Wing",
-    "priority": "Medium",
-    "suggestion": "Examine the forged documents, gather forensic evidence, and initiate legal proceedings."
-  },
-  {
-    "section": "509",
-    "keywords": {
-      "en": ["Word", "Gesture", "Intrusion upon the privacy of a woman", "Insult", "Modesty"],
-      "ta": ["வார்த்தை", "சைகை", "பெண்ணின் தனியுரிமை மீறல்", "அவமானம்", "அடக்கம்"]
-    },
-    "description": {
-      "en": "Word, gesture or act intended to insult the modesty of a woman: Whoever, intending to insult the modesty of any woman, utters any word, makes any sound or gesture, or exhibits any object, intending that such word or sound shall be heard, or that such gesture or object shall be seen, by such woman, or intrudes upon the privacy of such woman, shall be punished with simple imprisonment for a term which may extend to three years, and also with fine.",
-      "ta": "ஒரு பெண்ணின் அடக்கத்தை அவமதிக்கும் நோக்கில் வார்த்தை, சைகை அல்லது செயல்: எந்தவொரு பெண்ணின் அடக்கத்தை அவமதிக்க விரும்பும் எவரும், எந்தவொரு வார்த்தையையும் உச்சரித்தால், எந்தவொரு ஒலியையும் அல்லது சைகையையும் செய்தால் அல்லது எந்தவொரு பொருளையும் காட்சிப்படுத்தினால், அத்தகைய வார்த்தை அல்லது ஒலி கேட்கப்பட வேண்டும் அல்லது அத்தகைய சைகை அல்லது பொருள் அத்தகைய பெண்ணால் பார்க்கப்பட வேண்டும் அல்லது அத்தகைய பெண்ணின் தனிப்பட்ட உரிமையில் ஊடுருவ வேண்டும், அவர் மூன்று ஆண்டுகள் வரை நீட்டிக்கக்கூடிய ஒரு காலத்திற்கு எளிய சிறைத்தண்டனை மற்றும் அபராதத்துடன் தண்டிக்கப்படுவார்."
-    },
-    "department": "Women Protection Cell",
-    "priority": "Medium",
-    "suggestion": "Record the victim's statement, gather evidence of the insult, and initiate legal proceedings."
+    "sug_eng": "Register a complaint, investigate financial records, and take legal action to recover the misappropriated property.",
+    "sug_tam": "புகார் பதிவு செய்யவும், நிதி பதிவுகளை விசாரிக்கவும், முறைகேடாகப் பயன்படுத்தப்பட்ட சொத்தை மீட்டெடுக்க சட்ட நடவடிக்கை எடுக்கவும்."
   }
-  ]
+]
+
+
