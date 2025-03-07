@@ -14,6 +14,7 @@ SMTP_SERVER = "smtp.hostinger.com"
 SMTP_PORT = 465
 
 # Load department emails from JSON file
+# Load department emails from JSON file
 def load_department_emails():
     """Load department email IDs from JSON file"""
     try:
@@ -113,9 +114,13 @@ def create_department_email_body(user_name, document_name, analysis_results, dep
         # Use the display_description field if it exists, otherwise fall back to English description
         description = section.get("display_description", section.get("description", {}).get("en", ""))
         
+        # Use the display_description field if it exists, otherwise fall back to English description
+        description = section.get("display_description", section.get("description", {}).get("en", ""))
+        
         html += f"""
             <div class="section">
                 <p><b>Section {section.get('section')}</b> - Priority: {section.get('priority')}</p>
+                <p>{description}</p>
                 <p>{description}</p>
                 <p><b>Suggested Action:</b> {section.get('suggestion', '')}</p>
             </div>

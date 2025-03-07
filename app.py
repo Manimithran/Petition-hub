@@ -65,6 +65,23 @@ if ipc_texts:
 else:
     print("Warning: No valid IPC texts found for TF-IDF vectorization.")
 
+# Extract text for training, with error handling
+ipc_texts = []
+for section in ipc_data:
+    try:
+        # Ensure the section has 'desc_eng' and 'desc_tam' fields
+        desc_eng = section.get("desc_eng", "")  # Default to empty string if 'desc_eng' is missing
+        desc_tam = section.get("desc_tam", "")  # Default to empty string if 'desc_tam' is missing
+        ipc_texts.append(desc_eng + " " + desc_tam)
+    except Exception as e:
+        print(f"Error processing section: {e}")
+
+# Fit the TF-IDF Vectorizer
+if ipc_texts:
+    tfidf_vectorizer.fit(ipc_texts)
+else:
+    print("Warning: No valid IPC texts found for TF-IDF vectorization.")
+
 # Function to Extract Text from Files
 def extract_text(file_path, file_ext):
     text = ""
@@ -85,6 +102,7 @@ def extract_text(file_path, file_ext):
 
         elif file_ext in [".jpg", ".jpeg", ".png"]:
             text = perform_ocr(file_path)  # Use file_path for OCR
+            text = perform_ocr(file_path)  # Use file_path for OCR
 
     except Exception as e:
         print(f"Error extracting text: {e}")
@@ -95,6 +113,7 @@ def extract_text(file_path, file_ext):
 def perform_ocr(file_path):
     try:
         image = cv2.imread(file_path)  # Read the image using file_path
+        image = cv2.imread(file_path)  # Read the image using file_path
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         text = pytesseract.image_to_string(gray, lang="eng+tam")  # English & Tamil OCR
         return text.strip()
@@ -104,6 +123,12 @@ def perform_ocr(file_path):
 
 def analyze_petition(petition_text):
     """Analyze the petition text and identify relevant IPC sections"""
+    # Detect the language of the petition text
+    try:
+        language = detect(petition_text)
+    except:
+        language = "en"  # Default to English if language detection fails
+
     # Detect the language of the petition text
     try:
         language = detect(petition_text)
@@ -132,6 +157,8 @@ def analyze_petition(petition_text):
         
         # If keywords match, add to relevant sections
         if keyword_match:
+            # Add a new field to indicate the language for display purposes
+            section["display_language"] = language
             # Add a new field to indicate the language for display purposes
             section["display_language"] = language
             relevant_sections.append(section)
@@ -224,6 +251,7 @@ def upload():
     os.remove(temp_path)
 
     # Redirect to email notification page if emails were sent
+    # Redirect to email notification page if emails were sent
     if sent_departments:
         return redirect(url_for("email_notification", doc_id=doc_id, departments=",".join(sent_departments)))
     elif found_departments:
@@ -232,6 +260,9 @@ def upload():
     else:
         flash("Document analyzed but no relevant departments found", "info")
         return redirect(url_for("view_analysis", doc_id=doc_id))
+
+# Other routes (login, signup, history, etc.) remain unchanged
+# ...
 
 # Other routes (login, signup, history, etc.) remain unchanged
 # ...
