@@ -62,15 +62,35 @@
             <h2>Email Notification</h2>
         </div>
         <div class="dialog-content">
-            <p>Your document has been analyzed and emails have been sent to the following departments:</p>
+            <p>Your document has been analyzed. Please acknowledge to send emails to the following departments:</p>
             <ul class="department-list">
                 {% for department in departments %}
                 <li class="department-item">{{ department }}</li>
                 {% endfor %}
             </ul>
-            <p>A confirmation email has also been sent to your registered email address.</p>
+            <p>A confirmation email will also be sent to your registered email address.</p>
         </div>
-        <button class="ok-button" onclick="window.location.href='{{ redirect_url }}'">OK</button>
+        <button class="ok-button" onclick="sendAcknowledgment()">Acknowledge</button>
+
+        <script>
+            function sendAcknowledgment() {
+                fetch('/acknowledge', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ document_id: '{{ document_id }}' })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Emails have been sent successfully!");
+                        window.location.href = '{{ redirect_url }}'; // Redirect after acknowledgment
+                    } else {
+                        alert("Failed to send emails. Try again.");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+            }
+        </script>
     </div>
 </body>
-</html> 
+</html>

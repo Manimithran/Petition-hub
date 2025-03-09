@@ -41,6 +41,24 @@
             padding: 5px;
             margin-right: 20px;
         }
+        .acknowledge-button {
+            background-color: #4b6cb7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .acknowledge-button:hover {
+            background-color: #3b5998;
+        }
+        .acknowledge-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body class="home-body">
@@ -207,6 +225,11 @@
                                 <span id="pageNumber">1</span>
                                 <button onclick="nextPage()">Next</button>
                             </div>
+
+                            <!-- Acknowledge Button -->
+                            <button class="acknowledge-button" onclick="sendAcknowledgment()" {% if not pending_doc_id %}disabled{% endif %}>
+                                Acknowledge
+                            </button>
                         </div>
                     </div>
                     {% endif %}
@@ -280,6 +303,36 @@
     
         // Initial pagination setup
         updatePagination();
+
+        // Acknowledge Button Logic
+        function sendAcknowledgment() {
+            const button = document.querySelector('.acknowledge-button');
+            button.disabled = true; // Disable the button
+            button.textContent = 'Sending...'; // Change button text
+
+            fetch('/acknowledge', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Emails have been sent successfully!");
+                    window.location.href = "{{ url_for('home') }}"; // Refresh the page
+                } else {
+                    alert("Failed to send emails. Try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            })
+            .finally(() => {
+                button.disabled = false; // Re-enable the button
+                button.textContent = 'Acknowledge'; // Reset button text
+            });
+        }
     </script>
 </body>
 </html>

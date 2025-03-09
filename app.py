@@ -5,7 +5,6 @@ import PyPDF2
 import docx
 import pytesseract
 import nltk
-import torch
 import uuid
 import shutil
 from flask import Flask, request, render_template, redirect, url_for, session, flash, send_file, jsonify
@@ -65,54 +64,29 @@ if ipc_texts:
 else:
     print("Warning: No valid IPC texts found for TF-IDF vectorization.")
 
-# Extract text for training, with error handling
-ipc_texts = []
-for section in ipc_data:
-    try:
-        # Ensure the section has 'desc_eng' and 'desc_tam' fields
-        desc_eng = section.get("desc_eng", "")  # Default to empty string if 'desc_eng' is missing
-        desc_tam = section.get("desc_tam", "")  # Default to empty string if 'desc_tam' is missing
-        ipc_texts.append(desc_eng + " " + desc_tam)
-    except Exception as e:
-        print(f"Error processing section: {e}")
-
-# Fit the TF-IDF Vectorizer
-if ipc_texts:
-    tfidf_vectorizer.fit(ipc_texts)
-else:
-    print("Warning: No valid IPC texts found for TF-IDF vectorization.")
-
 # Function to Extract Text from Files
 def extract_text(file_path, file_ext):
     text = ""
-
     try:
         if file_ext == ".txt":
             with open(file_path, "r", encoding="utf-8") as f:
                 text = f.read()
-
         elif file_ext == ".pdf":
             with open(file_path, "rb") as f:
                 pdf_reader = PyPDF2.PdfReader(f)
                 text = "\n".join(page.extract_text() for page in pdf_reader.pages if page.extract_text())
-
         elif file_ext == ".docx":
             doc = docx.Document(file_path)
             text = "\n".join(para.text for para in doc.paragraphs)
-
         elif file_ext in [".jpg", ".jpeg", ".png"]:
             text = perform_ocr(file_path)  # Use file_path for OCR
-            text = perform_ocr(file_path)  # Use file_path for OCR
-
     except Exception as e:
         print(f"Error extracting text: {e}")
-
     return text.strip()
 
 # Function to Perform OCR on Images
 def perform_ocr(file_path):
     try:
-        image = cv2.imread(file_path)  # Read the image using file_path
         image = cv2.imread(file_path)  # Read the image using file_path
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         text = pytesseract.image_to_string(gray, lang="eng+tam")  # English & Tamil OCR
@@ -129,12 +103,6 @@ def analyze_petition(petition_text):
     except:
         language = "en"  # Default to English if language detection fails
 
-    # Detect the language of the petition text
-    try:
-        language = detect(petition_text)
-    except:
-        language = "en"  # Default to English if language detection fails
-
     # Preprocess the text
     petition_text = petition_text.lower()
     
@@ -143,7 +111,6 @@ def analyze_petition(petition_text):
     
     # Calculate similarity with each IPC section
     relevant_sections = []
-    
     for section in ipc_data:
         # Check if any keywords (English or Tamil) are present in the petition
         english_keywords = section.get("keywords", {}).get("en", [])
@@ -157,9 +124,6 @@ def analyze_petition(petition_text):
         
         # If keywords match, add to relevant sections
         if keyword_match:
-            # Add a new field to indicate the language for display purposes
-            section["display_language"] = language
-            # Add a new field to indicate the language for display purposes
             section["display_language"] = language
             relevant_sections.append(section)
     
@@ -217,56 +181,67 @@ def upload():
     username = session["username"]
     doc_id = save_document_history(username, original_filename, permanent_path, json.dumps(analysis_results))
     
-    # Send emails to relevant departments
-    sent_departments = []
-    found_departments = []
-    if analysis_results:
-        # Get unique departments from analysis results
-        found_departments = set(section.get("department") for section in analysis_results if section.get("department"))
-        
-        # Get user_id from session
-        user_id = session.get("user_id")
-        print(f"User ID from session: {user_id}")
-        
-        if not user_id:
-            user_id = get_user_id(username)
-            print(f"User ID from database: {user_id}")
-            
-            # Store user_id in session for future use
-            if user_id:
-                session["user_id"] = user_id
-        
-        if user_id:
-            success, sent_departments = send_emails_for_analysis(
-                user_id,
-                original_filename,
-                permanent_path,
-                analysis_results
-            )
-            print(f"Email sending result: {success}, Departments: {sent_departments}")
-        else:
-            print("Could not determine user_id for email sending")
+    # Store the document ID and analysis results in the session for acknowledgment
+    session["pending_doc_id"] = doc_id
+    session["analysis_results"] = analysis_results
     
     # Clean up temporary file
     os.remove(temp_path)
 
-    # Redirect to email notification page if emails were sent
-    # Redirect to email notification page if emails were sent
-    if sent_departments:
-        return redirect(url_for("email_notification", doc_id=doc_id, departments=",".join(sent_departments)))
-    elif found_departments:
-        # Departments were found but emails couldn't be sent
-        return redirect(url_for("email_error", doc_id=doc_id, departments=",".join(found_departments)))
+    # Redirect to the home page with analysis results
+    flash("Document analyzed successfully. Please acknowledge to notify departments.", "info")
+    return redirect(url_for("home"))
+
+# Route to Acknowledge and Send Emails
+@app.route("/acknowledge", methods=["POST"])
+def acknowledge():
+    # Check if user is logged in
+    if "username" not in session:
+        return jsonify({"success": False, "message": "Unauthorized"}), 403
+    
+    # Get the document ID and analysis results from the session
+    doc_id = session.get("pending_doc_id")
+    analysis_results = session.get("analysis_results")
+    
+    if not doc_id or not analysis_results:
+        return jsonify({"success": False, "message": "No document to acknowledge"}), 400
+    
+    # Get user_id from session
+    user_id = session.get("user_id")
+    if not user_id:
+        user_id = get_user_id(session["username"])
+        if user_id:
+            session["user_id"] = user_id
+    
+    if user_id:
+        # Get document details from the database
+        document = get_document_by_id(doc_id)
+        if not document:
+            return jsonify({"success": False, "message": "Document not found"}), 404
+        
+        # Extract required fields
+        document_name = document["original_filename"]
+        file_path = document["file_path"]
+        
+        # Send emails to relevant departments
+        success, sent_departments = send_emails_for_analysis(
+            user_id,
+            document_name,
+            file_path,
+            analysis_results
+        )
+        
+        if success:
+            # Clear the pending document from the session
+            session.pop("pending_doc_id", None)
+            session.pop("analysis_results", None)
+            return jsonify({"success": True, "message": "Emails sent successfully"})
+        else:
+            return jsonify({"success": False, "message": "Failed to send emails"}), 500
     else:
-        flash("Document analyzed but no relevant departments found", "info")
-        return redirect(url_for("view_analysis", doc_id=doc_id))
+        return jsonify({"success": False, "message": "Could not determine user_id for email sending"}), 400
 
-# Other routes (login, signup, history, etc.) remain unchanged
-# ...
-
-# Other routes (login, signup, history, etc.) remain unchanged
-# ...
-
+# Route to Show Email Notification
 @app.route("/email_notification")
 def email_notification():
     """Show email notification dialog"""
@@ -274,37 +249,37 @@ def email_notification():
     if "username" not in session:
         return redirect(url_for("login"))
     
-    doc_id = request.args.get("doc_id")
-    departments_str = request.args.get("departments", "")
-    departments = departments_str.split(",") if departments_str else []
+    # Get the document ID and analysis results from the session
+    doc_id = session.get("pending_doc_id")
+    analysis_results = session.get("analysis_results")
+    
+    if not doc_id or not analysis_results:
+        flash("No document to acknowledge", "error")
+        return redirect(url_for("home"))
+    
+    # Get unique departments from analysis results
+    departments = set(section.get("department") for section in analysis_results if section.get("department"))
     
     # URL to redirect to after clicking OK
     redirect_url = url_for("view_analysis", doc_id=doc_id)
     
-    return render_template("email_notification.html", departments=departments, redirect_url=redirect_url)
+    return render_template("email_notification.html", departments=departments, redirect_url=redirect_url, document_id=doc_id)
 
-@app.route("/email_error")
-def email_error():
-    """Show email error dialog when departments were found but emails couldn't be sent"""
-    # Check if user is logged in
-    if "username" not in session:
-        return redirect(url_for("login"))
-    
-    doc_id = request.args.get("doc_id")
-    departments_str = request.args.get("departments", "")
-    departments = departments_str.split(",") if departments_str else []
-    
-    # URL to redirect to after clicking OK
-    redirect_url = url_for("view_analysis", doc_id=doc_id)
-    
-    return render_template("email_error.html", departments=departments, redirect_url=redirect_url)
-
+# Route to Home Page
 @app.route('/')
 def home():
     if 'username' in session:
-        return render_template('home.html', username=session['username'])
+        # Check if there is a pending document to acknowledge
+        pending_doc_id = session.get("pending_doc_id")
+        analysis_results = session.get("analysis_results")
+        
+        return render_template('home.html', 
+                              username=session['username'], 
+                              pending_doc_id=pending_doc_id,
+                              analysis_results=analysis_results)
     return redirect(url_for('login'))
 
+# Route to View Document History
 @app.route('/history')
 def history():
     if 'username' not in session:
@@ -314,6 +289,7 @@ def history():
     documents = get_user_documents(session['username'])
     return render_template('history.html', username=session['username'], documents=documents)
 
+# Route to Download Document
 @app.route('/download/<doc_id>')
 def download_document(doc_id):
     if 'username' not in session:
@@ -334,6 +310,7 @@ def download_document(doc_id):
     # Return the file for download
     return send_file(file_path, as_attachment=True, download_name=document['original_filename'])
 
+# Route to View Analysis Results
 @app.route('/view_analysis/<doc_id>')
 def view_analysis(doc_id):
     if 'username' not in session:
@@ -371,6 +348,7 @@ def view_analysis(doc_id):
         flash(f'Error viewing document: {str(e)}')
         return redirect(url_for('history'))
 
+# Route to Signup
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     # If user is already logged in, redirect to home
@@ -399,6 +377,7 @@ def signup():
             
     return render_template('signup.html')
 
+# Route to Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # If user is already logged in, redirect to home
@@ -420,6 +399,7 @@ def login():
     
     return render_template('login.html')
 
+# Route to Logout
 @app.route('/logout')
 def logout():
     session.pop('username', None)
