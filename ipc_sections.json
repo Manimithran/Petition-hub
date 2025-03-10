@@ -261,6 +261,58 @@
     "priority": "Medium",
     "sug_eng": "Register a complaint, investigate financial records, and take legal action to recover the misappropriated property.",
     "sug_tam": "புகார் பதிவு செய்யவும், நிதி பதிவுகளை விசாரிக்கவும், முறைகேடாகப் பயன்படுத்தப்பட்ட சொத்தை மீட்டெடுக்க சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "302",
+    "keywords": {
+      "en": ["Murder", "Crime", "Punishment", "Homicide", "Death"],
+      "ta": ["கொலை", "குற்றம்", "தண்டனை", "மனித கொலை", "மரணம்"]
+    },
+    "desc_eng": "Murder: Whoever commits murder shall be punished with death or imprisonment for life, and shall also be liable to a fine.",
+    "desc_tam": "கொலை: ஒருவர் கொலை செய்தால், அவருக்கு மரண தண்டனை அல்லது ஆயுள் தண்டனை மற்றும் அபராதம் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "High",
+    "sug_eng": "Register an FIR, conduct a thorough investigation, collect forensic evidence, and ensure the accused is brought to justice.",
+    "sug_tam": "FIR பதிவு செய்யவும், முழுமையான விசாரணை நடத்தவும், ஆய்வு சான்றுகளை சேகரிக்கவும், குற்றவாளி நீதிக்கு உட்படுத்தப்படுவதை உறுதி செய்யவும்."
+  },
+  {
+    "section": "304B",
+    "keywords": {
+      "en": ["Dowry Death", "Crime", "Punishment", "Domestic Violence", "Harassment"],
+      "ta": ["வரதட்சணை மரணம்", "குற்றம்", "தண்டனை", "இல்லற வன்முறை", "துன்புறுத்தல்"]
+    },
+    "desc_eng": "Dowry Death: If the death of a woman is caused by burns or bodily injury within seven years of marriage, and it is shown that she was subjected to cruelty or harassment for dowry, it shall be presumed as dowry death.",
+    "desc_tam": "வரதட்சணை மரணம்: திருமணத்திற்கு ஏழு ஆண்டுகளுக்குள் ஒரு பெண் தீக்காயம் அல்லது உடல் காயம் காரணமாக இறந்து, அவர் வரதட்சணை காரணமாக கொடுமை அல்லது துன்புறுத்தலுக்கு உட்பட்டதாக நிரூபிக்கப்பட்டால், அது வரதட்சணை மரணமாக கருதப்படும்.",
+    "department": "Police/Women’s Safety",
+    "priority": "High",
+    "sug_eng": "Register an FIR, investigate the circumstances of death, collect evidence of dowry harassment, and prosecute the accused.",
+    "sug_tam": "FIR பதிவு செய்யவும், மரணத்தின் சூழ்நிலைகளை விசாரிக்கவும், வரதட்சணை துன்புறுத்தலின் ஆதாரங்களை சேகரிக்கவும், குற்றவாளிக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "376",
+    "keywords": {
+      "en": ["Rape", "Sexual Assault", "Crime", "Punishment", "Protection"],
+      "ta": ["மூலாதார வன்முறை", "பாலியல் தாக்குதல்", "குற்றம்", "தண்டனை", "பாதுகாப்பு"]
+    },
+    "desc_eng": "Rape: A man is said to commit rape if he has sexual intercourse with a woman against her will, without her consent, or with her consent obtained under fear or fraud.",
+    "desc_tam": "மூலாதார வன்முறை: ஒரு பெண்ணின் சம்மதமின்றி, அவளுடைய விருப்பத்திற்கு எதிராக, அல்லது பயம் அல்லது மோசடியின் கீழ் பெறப்பட்ட சம்மதத்துடன் பாலியல் உறவு கொண்டால், ஒரு மனிதன் மூலாதார வன்முறை செய்ததாக கருதப்படுகிறார்.",
+    "department": "Police/Women’s Safety",
+    "priority": "High",
+    "sug_eng": "Provide immediate medical assistance, register an FIR, collect forensic evidence, and ensure the accused is arrested and prosecuted.",
+    "sug_tam": "உடனடியாக மருத்துவ உதவி வழங்கவும், FIR பதிவு செய்யவும், ஆய்வு சான்றுகளை சேகரிக்கவும், குற்றவாளி கைது செய்யப்பட்டு வழக்கு தொடரப்படுவதை உறுதி செய்யவும்."
+  },
+  {
+    "section": "411",
+    "keywords": {
+      "en": ["Stolen Property", "Crime", "Punishment", "Possession", "Theft"],
+      "ta": ["திருடப்பட்ட சொத்து", "குற்றம்", "தண்டனை", "உடைமை", "திருட்டு"]
+    },
+    "desc_eng": "Whoever dishonestly receives or retains stolen property, knowing or having reason to believe it to be stolen, shall be punished with imprisonment up to 3 years, or with a fine, or both.",
+    "desc_tam": "ஒருவர் நேர்மையற்ற முறையில் திருடப்பட்ட சொத்தை பெற்று அல்லது வைத்திருக்கும் போது, அது திருடப்பட்டது என்று அறிந்தோ அல்லது நம்புவதற்கு காரணமானோ இருந்தால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "Medium",
+    "sug_eng": "Register a complaint, investigate the source of the stolen property, and take legal action against the accused.",
+    "sug_tam": "புகார் பதிவு செய்யவும், திருடப்பட்ட சொத்தின் மூலத்தை விசாரிக்கவும், குற்றவாளிக்கு எதிராக சட்ட நடவடிக்கை எடுக்கவும்."
   }
 ]
 
