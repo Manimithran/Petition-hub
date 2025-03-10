@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +9,29 @@
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://cdn3.careeraddict.com/uploads/article/59650/illustration-laptop-gavel.jpg');
-            background-size: cover;
-            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Image with Blur Effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* Law Library Image */
+            background-size: cover;
+            background-position: center;
+            /*filter: blur(3px); Adjust blur intensity */
+            z-index: -1;
         }
 
         .container {
@@ -27,6 +42,7 @@
             max-width: 400px;
             padding: 20px;
             margin: 20px;
+            position: relative;
         }
 
         .header {
@@ -35,7 +51,7 @@
         }
 
         .header h1 {
-            color: #4b6cb7;
+            color: #b7784b;
             margin: 0;
             font-size: 24px;
         }
@@ -61,7 +77,7 @@
         }
 
         .submit-btn {
-            background-color: #4b6cb7;
+            background-color: #b7874b;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -82,7 +98,7 @@
         }
 
         .links a {
-            color: #4b6cb7;
+            color: #b7804b;
             text-decoration: none;
         }
 
@@ -136,9 +152,10 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Login to Legal Solver</h1>
+            <h1>Login to Petition Hub</h1>
         </div>
         
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 <div class="flash-messages">
@@ -149,6 +166,7 @@
             {% endif %}
         {% endwith %}
         
+        <!-- Login Form -->
         <form method="POST" action="{{ url_for('login') }}">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -161,6 +179,7 @@
             <button type="submit" class="submit-btn">Login</button>
         </form>
         
+        <!-- Signup Link -->
         <div class="links">
             <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
         </div>
