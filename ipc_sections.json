@@ -313,6 +313,266 @@
     "priority": "Medium",
     "sug_eng": "Register a complaint, investigate the source of the stolen property, and take legal action against the accused.",
     "sug_tam": "புகார் பதிவு செய்யவும், திருடப்பட்ட சொத்தின் மூலத்தை விசாரிக்கவும், குற்றவாளிக்கு எதிராக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "120B",
+    "keywords": {
+      "en": ["Criminal Conspiracy", "Planning", "Crime", "Punishment", "Group Offense"],
+      "ta": ["குற்றவியல் சதி", "திட்டமிடல்", "குற்றம்", "தண்டனை", "குழு குற்றம்"]
+    },
+    "desc_eng": "Criminal Conspiracy: When two or more persons agree to commit an illegal act or a legal act by illegal means, they are guilty of criminal conspiracy.",
+    "desc_tam": "குற்றவியல் சதி: இரண்டு அல்லது அதற்கு மேற்பட்ட நபர்கள் சட்டவிரோத செயலை செய்ய அல்லது சட்டபூர்வமான செயலை சட்டவிரோத முறையில் செய்ய ஒப்புக்கொண்டால், அவர்கள் குற்றவியல் சதியில் குற்றவாளிகள் ஆவார்கள்.",
+    "department": "Police",
+    "priority": "High",
+    "sug_eng": "Identify conspirators, gather evidence of planning, and initiate legal proceedings.",
+    "sug_tam": "சதித்திட்டக்காரர்களை அடையாளம் காணவும், திட்டமிடலின் ஆதாரங்களை சேகரிக்கவும், சட்ட நடவடிக்கைகளை தொடங்கவும்."
+  },
+  {
+    "section": "279",
+    "keywords": {
+      "en": ["Rash Driving", "Accident", "Crime", "Public Safety", "Negligence"],
+      "ta": ["பொறுப்பற்ற வாகன ஓட்டுதல்", "விபத்து", "குற்றம்", "பொது பாதுகாப்பு", "அசட்டை"]
+    },
+    "desc_eng": "Rash Driving: Whoever drives a vehicle on a public way in a manner so rash or negligent as to endanger human life or personal safety shall be punished with imprisonment up to 6 months, or with a fine up to ₹1,000, or both.",
+    "desc_tam": "பொறுப்பற்ற வாகன ஓட்டுதல்: ஒருவர் பொது சாலையில் மனித உயிர்க்கு அல்லது தனிப்பட்ட பாதுகாப்புக்கு ஆபத்து விளைவிக்கும் வகையில் பொறுப்பற்ற அல்லது அசட்டையான முறையில் வாகனம் ஓட்டினால், அவருக்கு 6 மாதம் வரை சிறைத்தண்டனை அல்லது ₹1,000 வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Traffic Police",
+    "priority": "Medium",
+    "sug_eng": "Issue a challan, suspend the driver’s license if necessary, and ensure road safety measures are enforced.",
+    "sug_tam": "சாலன் வழங்கவும், தேவைப்பட்டால் ஓட்டுநர் உரிமத்தை இடைநிறுத்தவும், சாலை பாதுகாப்பு நடவடிக்கைகளை செயல்படுத்தவும்."
+  },
+  {
+    "section": "354A",
+    "keywords": {
+      "en": ["Sexual Harassment", "Women Safety", "Crime", "Punishment", "Assault"],
+      "ta": ["பாலியல் துன்புறுத்தல்", "பெண்கள் பாதுகாப்பு", "குற்றம்", "தண்டனை", "தாக்குதல்"]
+    },
+    "desc_eng": "Sexual Harassment: Whoever makes physical contact, advances, or demands sexual favors with unwelcome and explicit sexual overtures shall be punished with imprisonment up to 3 years, or with a fine, or both.",
+    "desc_tam": "பாலியல் துன்புறுத்தல்: ஒருவர் தேவையற்ற மற்றும் வெளிப்படையான பாலியல் முன்மொழிவுகளுடன் உடல் தொடர்பு கொண்டால், முன்னேறினால் அல்லது பாலியல் உதவிகளை கோரினால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Women’s Safety & Police",
+    "priority": "High",
+    "sug_eng": "Ensure the victim’s safety, register a complaint, and take immediate legal action against the accused.",
+    "sug_tam": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், புகார் பதிவு செய்யவும், குற்றவாளிக்கு எதிராக உடனடியாக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "498",
+    "keywords": {
+      "en": ["Enticement", "Marriage", "Crime", "Punishment", "Seduction"],
+      "ta": ["வழிமாற்றுதல்", "திருமணம்", "குற்றம்", "தண்டனை", "மயக்குதல்"]
+    },
+    "desc_eng": "Enticement: Whoever takes or entices away any woman with the intent that she may have illicit intercourse with any person shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+    "desc_tam": "வழிமாற்றுதல்: ஒருவர் எந்தவொரு நபருடன் சட்டவிரோத பாலியல் உறவு கொள்ளும் நோக்கத்துடன் எந்தவொரு பெண்ணையும் அழைத்துச் சென்றால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "Medium",
+    "sug_eng": "Register a complaint, investigate the intent, and take legal action against the accused.",
+    "sug_tam": "புகார் பதிவு செய்யவும், நோக்கத்தை விசாரிக்கவும், குற்றவாளிக்கு எதிராக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "503",
+    "keywords": {
+      "en": ["Criminal Intimidation", "Threat", "Crime", "Punishment", "Fear"],
+      "ta": ["குற்றவியல் அச்சுறுத்தல்", "மிரட்டல்", "குற்றம்", "தண்டனை", "பயம்"]
+    },
+    "desc_eng": "Criminal Intimidation: Whoever threatens another with injury to their person, reputation, or property with the intent to cause alarm shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+    "desc_tam": "குற்றவியல் அச்சுறுத்தல்: ஒருவர் மற்றொருவரை அவருடைய உடல், புகழ் அல்லது சொத்துக்கு தீங்கு விளைவிக்கும் நோக்குடன் மிரட்டினால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "Medium",
+    "sug_eng": "Record the complaint, collect evidence of threats, and ensure the victim’s safety.",
+    "sug_tam": "புகார் பதிவு செய்யவும், மிரட்டலின் ஆதாரங்களை சேகரிக்கவும், பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும்."
+  },
+  {
+    "section": "504",
+    "keywords": {
+      "en": ["Intentional Insult", "Provocation", "Crime", "Punishment", "Breach of Peace"],
+      "ta": ["வேண்டுமென்றே அவமானம்", "தூண்டுதல்", "குற்றம்", "தண்டனை", "அமைதி மீறல்"]
+    },
+    "desc_eng": "Intentional Insult: Whoever intentionally insults or provokes another, intending or knowing it is likely to cause a breach of peace, shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+    "desc_tam": "வேண்டுமென்றே அவமானம்: ஒருவர் வேண்டுமென்றே மற்றொருவரை அவமானப்படுத்தினால் அல்லது தூண்டினால், அது அமைதியை மீறும் என்று நோக்கமாகவோ அல்லது அறிந்தோ இருந்தால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "Medium",
+    "sug_eng": "Register a complaint, record witness statements, and take legal action if necessary.",
+    "sug_tam": "புகார் பதிவு செய்யவும், சாட்சிகளின் வாக்குமூலங்களை பதிவு செய்யவும், தேவைப்பட்டால் சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "506",
+    "keywords": {
+      "en": ["Criminal Intimidation", "Threat", "Crime", "Punishment", "Fear"],
+      "ta": ["குற்றவியல் அச்சுறுத்தல்", "மிரட்டல்", "குற்றம்", "தண்டனை", "பயம்"]
+    },
+    "desc_eng": "Criminal Intimidation: Whoever threatens another with injury to their person, reputation, or property with the intent to cause alarm shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+    "desc_tam": "குற்றவியல் அச்சுறுத்தல்: ஒருவர் மற்றொருவரை அவருடைய உடல், புகழ் அல்லது சொத்துக்கு தீங்கு விளைவிக்கும் நோக்குடன் மிரட்டினால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Police",
+    "priority": "Medium",
+    "sug_eng": "Record the complaint, collect evidence of threats, and ensure the victim’s safety.",
+    "sug_tam": "புகார் பதிவு செய்யவும், மிரட்டலின் ஆதாரங்களை சேகரிக்கவும், பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும்."
+  },
+  {
+    "section": "66F",
+    "keywords": {
+      "en": ["Cyber Terrorism", "Cyber Crime", "National Security", "Punishment", "Hacking"],
+      "ta": ["சைபர் பயங்கரவாதம்", "சைபர் குற்றம்", "தேசிய பாதுகாப்பு", "தண்டனை", "ஹேக்கிங்"]
+    },
+    "desc_eng": "Cyber Terrorism: Whoever commits acts of cyber terrorism with the intent to threaten the unity, integrity, security, or sovereignty of India shall be punished with life imprisonment.",
+    "desc_tam": "சைபர் பயங்கரவாதம்: இந்தியாவின் ஒற்றுமை, ஒருமைப்பாடு, பாதுகாப்பு அல்லது இறையாண்மையை அச்சுறுத்தும் நோக்குடன் சைபர் பயங்கரவாத செயல்களை செய்தால், அவருக்கு ஆயுள் தண்டனை விதிக்கப்படும்.",
+    "department": "Cyber Crime",
+    "priority": "High",
+    "sug_eng": "Investigate the cyber attack, trace the source, and take immediate legal action against the accused.",
+    "sug_tam": "சைபர் தாக்குதலை விசாரிக்கவும், மூலத்தை கண்டறியவும், குற்றவாளிக்கு எதிராக உடனடியாக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "43",
+    "keywords": {
+      "en": ["Environmental Damage", "Pollution", "Crime", "Punishment", "Ecosystem"],
+      "ta": ["சுற்றுச்சூழல் சேதம்", "மாசுபாடு", "குற்றம்", "தண்டனை", "சுற்றுச்சூழல் அமைப்பு"]
+    },
+    "desc_eng": "Environmental Damage: Whoever causes damage to the environment by polluting air, water, or soil shall be punished with imprisonment up to 5 years, or with a fine, or both.",
+    "desc_tam": "சுற்றுச்சூழல் சேதம்: ஒருவர் காற்று, நீர் அல்லது மண்ணை மாசுபடுத்தி சுற்றுச்சூழலுக்கு சேதம் விளைவித்தால், அவருக்கு 5 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Environmental Crime",
+    "priority": "High",
+    "sug_eng": "Conduct an environmental audit, collect evidence of pollution, and prosecute the offenders.",
+    "sug_tam": "சுற்றுச்சூழல் தணிக்கை நடத்தவும், மாசுபாட்டின் ஆதாரங்களை சேகரிக்கவும், குற்றவாளிகளுக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "138",
+    "keywords": {
+      "en": ["Cheque Bounce", "Financial Crime", "Punishment", "Debt", "Banking"],
+      "ta": ["செக் பவுன்ஸ்", "நிதி குற்றம்", "தண்டனை", "கடன்", "வங்கி"]
+    },
+    "desc_eng": "Cheque Bounce: If a cheque is dishonored due to insufficient funds, the drawer shall be punished with imprisonment up to 2 years, or with a fine up to twice the cheque amount, or both.",
+    "desc_tam": "செக் பவுன்ஸ்: ஒரு செக் போதுமான நிதி இல்லாததால் மறுக்கப்பட்டால், அதை வழங்கியவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது செக்கின் தொகையை இரட்டிப்பாக அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Financial Crime",
+    "priority": "Medium",
+    "sug_eng": "File a complaint, verify bank records, and initiate legal proceedings against the defaulter.",
+    "sug_tam": "புகார் தாக்கல் செய்யவும், வங்கி பதிவுகளை சரிபார்க்கவும், கடன்பட்டவருக்கு எதிராக சட்ட நடவடிக்கை தொடங்கவும்."
+  },
+  {
+    "section": "279",
+    "keywords": {
+      "en": ["Rash Driving", "Traffic Violation", "Crime", "Public Safety", "Negligence"],
+      "ta": ["பொறுப்பற்ற வாகன ஓட்டுதல்", "போக்குவரத்து மீறல்", "குற்றம்", "பொது பாதுகாப்பு", "அசட்டை"]
+    },
+    "desc_eng": "Rash Driving: Whoever drives a vehicle on a public way in a manner so rash or negligent as to endanger human life or personal safety shall be punished with imprisonment up to 6 months, or with a fine up to ₹1,000, or both.",
+    "desc_tam": "பொறுப்பற்ற வாகன ஓட்டுதல்: ஒருவர் பொது சாலையில் மனித உயிர்க்கு அல்லது தனிப்பட்ட பாதுகாப்புக்கு ஆபத்து விளைவிக்கும் வகையில் பொறுப்பற்ற அல்லது அசட்டையான முறையில் வாகனம் ஓட்டினால், அவருக்கு 6 மாதம் வரை சிறைத்தண்டனை அல்லது ₹1,000 வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Traffic Police",
+    "priority": "Medium",
+    "sug_eng": "Issue a challan, suspend the driver’s license if necessary, and ensure road safety measures are enforced.",
+    "sug_tam": "சாலன் வழங்கவும், தேவைப்பட்டால் ஓட்டுநர் உரிமத்தை இடைநிறுத்தவும், சாலை பாதுகாப்பு நடவடிக்கைகளை செயல்படுத்தவும்."
+  },
+  {
+    "section": "354D",
+    "keywords": {
+      "en": ["Stalking", "Women Safety", "Crime", "Punishment", "Harassment"],
+      "ta": ["பின்தொடர்தல்", "பெண்கள் பாதுகாப்பு", "குற்றம்", "தண்டனை", "துன்புறுத்தல்"]
+    },
+    "desc_eng": "Stalking: Whoever follows or contacts a woman persistently, despite her clear disinterest, shall be punished with imprisonment up to 3 years, or with a fine, or both.",
+    "desc_tam": "பின்தொடர்தல்: ஒருவர் ஒரு பெண்ணை அவளுடைய தெளிவான அக்கறையின்மை இருந்தும் தொடர்ந்து பின்தொடர்ந்து அல்லது தொடர்பு கொண்டால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Women’s Safety",
+    "priority": "High",
+    "sug_eng": "Ensure the victim’s safety, register a complaint, and take immediate legal action against the stalker.",
+    "sug_tam": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், புகார் பதிவு செய்யவும், பின்தொடர்பவருக்கு எதிராக உடனடியாக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "409",
+    "keywords": {
+      "en": ["Criminal Breach of Trust", "Fraud", "Crime", "Punishment", "Public Servant"],
+      "ta": ["நம்பிக்கை மோசடி", "மோசடி", "குற்றம்", "தண்டனை", "பொது ஊழியர்"]
+    },
+    "desc_eng": "Criminal Breach of Trust by Public Servant: If a public servant dishonestly misappropriates property entrusted to them, they shall be punished with imprisonment up to 10 years, or with a fine, or both.",
+    "desc_tam": "பொது ஊழியரால் நம்பிக்கை மோசடி: ஒரு பொது ஊழியர் ஒப்படைக்கப்பட்ட சொத்தை நேர்மையற்ற முறையில் முறைகேடு செய்தால், அவருக்கு 10 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Financial Crime",
+    "priority": "High",
+    "sug_eng": "Investigate the misuse of public funds, collect evidence, and prosecute the accused.",
+    "sug_tam": "பொது நிதியின் தவறான பயன்பாட்டை விசாரிக்கவும், ஆதாரங்களை சேகரிக்கவும், குற்றவாளிக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "66",
+    "keywords": {
+      "en": ["Hacking", "Unauthorized Access", "Cyber Crime", "Punishment", "Data Theft"],
+      "ta": ["ஹேக்கிங்", "அங்கீகரிக்கப்படாத அணுகல்", "சைபர் குற்றம்", "தண்டனை", "தரவு திருட்டு"]
+    },
+    "desc_eng": "Hacking: Whoever with the intent to cause wrongful loss or damage, secures access to any computer, system, or network without authorization shall be punished with imprisonment up to 3 years, or with a fine up to ₹5 lakh, or both.",
+    "desc_tam": "ஹேக்கிங்: ஒருவர் தவறான இழப்பு அல்லது சேதத்தை ஏற்படுத்தும் நோக்கத்துடன், அங்கீகாரம் இல்லாமல் எந்த கணினி, அமைப்பு அல்லது நெட்வொர்க்கிற்கும் அணுகலைப் பெற்றால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது ₹5 லட்சம் வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Cyber Crime",
+    "priority": "High",
+    "sug_eng": "Investigate the unauthorized access, trace the hacker, and take immediate legal action.",
+    "sug_tam": "அங்கீகாரம் இல்லாத அணுகலை விசாரிக்கவும், ஹேக்கரை கண்டறியவும், உடனடியாக சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "277",
+    "keywords": {
+      "en": ["Water Pollution", "Environmental Crime", "Punishment", "Public Health", "Contamination"],
+      "ta": ["நீர் மாசுபாடு", "சுற்றுச்சூழல் குற்றம்", "தண்டனை", "பொது சுகாதாரம்", "மாசுபடுத்தல்"]
+    },
+    "desc_eng": "Water Pollution: Whoever fouls the water of any public spring or reservoir, rendering it less fit for use, shall be punished with imprisonment up to 3 months, or with a fine up to ₹500, or both.",
+    "desc_tam": "நீர் மாசுபாடு: ஒருவர் பொது நீரூற்று அல்லது நீர்த்தேக்கத்தின் நீரை மாசுபடுத்தி, அதை பயன்பாட்டிற்கு குறைவாக உகந்ததாக ஆக்கினால், அவருக்கு 3 மாதம் வரை சிறைத்தண்டனை அல்லது ₹500 வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Environmental Crime",
+    "priority": "Medium",
+    "sug_eng": "Conduct water quality tests, identify the polluter, and take legal action.",
+    "sug_tam": "நீரின் தரத்தை சோதிக்கவும், மாசுபடுத்துபவரை அடையாளம் காணவும், சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "420",
+    "keywords": {
+      "en": ["Cheating", "Fraud", "Financial Crime", "Punishment", "Deception"],
+      "ta": ["மோசடி", "ஏமாற்றுதல்", "நிதி குற்றம்", "தண்டனை", "வஞ்சகம்"]
+    },
+    "desc_eng": "Cheating: Whoever cheats and thereby dishonestly induces the person deceived to deliver property shall be punished with imprisonment up to 7 years, or with a fine, or both.",
+    "desc_tam": "மோசடி: ஒருவர் மோசடி செய்து, வஞ்சகமாக சொத்தை வழங்குமாறு மற்றொருவரை தூண்டினால், அவருக்கு 7 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Financial Crime",
+    "priority": "High",
+    "sug_eng": "File an FIR, investigate financial records, and prosecute the accused.",
+    "sug_tam": "FIR பதிவு செய்யவும், நிதி பதிவுகளை விசாரிக்கவும், குற்றவாளிக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "409",
+    "keywords": {
+      "en": ["Criminal Breach of Trust", "Fraud", "Public Servant", "Punishment", "Misappropriation"],
+      "ta": ["நம்பிக்கை மோசடி", "மோசடி", "பொது ஊழியர்", "தண்டனை", "முறைகேடு"]
+    },
+    "desc_eng": "Criminal Breach of Trust by Public Servant: If a public servant dishonestly misappropriates property entrusted to them, they shall be punished with imprisonment up to 10 years, or with a fine, or both.",
+    "desc_tam": "பொது ஊழியரால் நம்பிக்கை மோசடி: ஒரு பொது ஊழியர் ஒப்படைக்கப்பட்ட சொத்தை நேர்மையற்ற முறையில் முறைகேடு செய்தால், அவருக்கு 10 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Financial Crime",
+    "priority": "High",
+    "sug_eng": "Investigate the misuse of public funds, collect evidence, and prosecute the accused.",
+    "sug_tam": "பொது நிதியின் தவறான பயன்பாட்டை விசாரிக்கவும், ஆதாரங்களை சேகரிக்கவும், குற்றவாளிக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "66C",
+    "keywords": {
+      "en": ["Identity Theft", "Cyber Crime", "Punishment", "Fraud", "Data Theft"],
+      "ta": ["அடையாள திருட்டு", "சைபர் குற்றம்", "தண்டனை", "மோசடி", "தரவு திருட்டு"]
+    },
+    "desc_eng": "Identity Theft: Whoever fraudulently uses another person’s electronic signature, password, or unique identification feature shall be punished with imprisonment up to 3 years, or with a fine up to ₹1 lakh, or both.",
+    "desc_tam": "அடையாள திருட்டு: ஒருவர் மற்றொருவரின் மின்னணு கையொப்பம், கடவுச்சொல் அல்லது தனித்துவமான அடையாள அம்சத்தை மோசடியாக பயன்படுத்தினால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது ₹1 லட்சம் வரை அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Cyber Crime",
+    "priority": "High",
+    "sug_eng": "Investigate the identity theft, trace the accused, and take legal action.",
+    "sug_tam": "அடையாள திருட்டை விசாரிக்கவும், குற்றவாளியை கண்டறியவும், சட்ட நடவடிக்கை எடுக்கவும்."
+  },
+  {
+    "section": "304A",
+    "keywords": {
+      "en": ["Rash Driving", "Death by Negligence", "Traffic Violation", "Punishment", "Accident"],
+      "ta": ["பொறுப்பற்ற வாகன ஓட்டுதல்", "அசட்டையால் மரணம்", "போக்குவரத்து மீறல்", "தண்டனை", "விபத்து"]
+    },
+    "desc_eng": "Death by Negligence: Whoever causes the death of any person by rash or negligent driving shall be punished with imprisonment up to 2 years, or with a fine, or both.",
+    "desc_tam": "அசட்டையால் மரணம்: ஒருவர் பொறுப்பற்ற அல்லது அசட்டையான வாகன ஓட்டுதலால் மற்றொருவரின் மரணத்தை ஏற்படுத்தினால், அவருக்கு 2 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Traffic Police",
+    "priority": "High",
+    "sug_eng": "Investigate the accident, suspend the driver’s license, and prosecute the accused.",
+    "sug_tam": "விபத்தை விசாரிக்கவும், ஓட்டுநர் உரிமத்தை இடைநிறுத்தவும், குற்றவாளிக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "354A",
+    "keywords": {
+      "en": ["Sexual Harassment", "Women Safety", "Crime", "Punishment", "Assault"],
+      "ta": ["பாலியல் துன்புறுத்தல்", "பெண்கள் பாதுகாப்பு", "குற்றம்", "தண்டனை", "தாக்குதல்"]
+    },
+    "desc_eng": "Sexual Harassment: Whoever makes unwelcome physical contact, advances, or demands sexual favors shall be punished with imprisonment up to 3 years, or with a fine, or both.",
+    "desc_tam": "பாலியல் துன்புறுத்தல்: ஒருவர் தேவையற்ற உடல் தொடர்பு கொண்டால், முன்னேறினால் அல்லது பாலியல் உதவிகளை கோரினால், அவருக்கு 3 ஆண்டு வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Women’s Safety",
+    "priority": "High",
+    "sug_eng": "Ensure the victim’s safety, register a complaint, and take immediate legal action.",
+    "sug_tam": "பாதிக்கப்பட்டவரின் பாதுகாப்பை உறுதி செய்யவும், புகார் பதிவு செய்யவும், உடனடியாக சட்ட நடவடிக்கை எடுக்கவும்."
   }
 ]
 
