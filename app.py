@@ -192,7 +192,9 @@ def upload():
     flash("Document analyzed successfully. Please acknowledge to notify departments.", "info")
     return redirect(url_for("home"))
 
-# Route to Acknowledge and Send Emails
+
+
+# app.py (No major changes, just ensure the function call is correct)
 @app.route("/acknowledge", methods=["POST"])
 def acknowledge():
     # Check if user is logged in
@@ -240,6 +242,7 @@ def acknowledge():
             return jsonify({"success": False, "message": "Failed to send emails"}), 500
     else:
         return jsonify({"success": False, "message": "Could not determine user_id for email sending"}), 400
+    
 
 # Route to Show Email Notification
 @app.route("/email_notification")

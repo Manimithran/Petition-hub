@@ -2,6 +2,7 @@ import os
 import json
 import smtplib
 import ssl
+import uuid  # For generating unique referral IDs
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
@@ -78,7 +79,7 @@ def send_email(recipient_email, subject, body, attachment_path=None):
         print(f"ERROR: Unexpected error sending email: {e}")
         return False
 
-def create_department_email_body(user_name, document_name, analysis_results, department):
+def create_department_email_body(user_name, document_name, analysis_results, department, referral_id):
     """Create email body for department notification"""
     relevant_sections = [section for section in analysis_results if section.get("department") == department]
     
@@ -105,6 +106,7 @@ def create_department_email_body(user_name, document_name, analysis_results, dep
             
             <h3>Document Details:</h3>
             <p><b>Document Name:</b> {document_name}</p>
+            <p><b>Referral ID:</b> {referral_id}</p>
             
             <h3>Relevant IPC Sections:</h3>
     """
@@ -134,7 +136,7 @@ def create_department_email_body(user_name, document_name, analysis_results, dep
     
     return html
 
-def create_user_acknowledgment_email(user_name, document_name, departments):
+def create_user_acknowledgment_email(user_name, document_name, departments, referral_id):
     """Create email body for user acknowledgment"""
     departments_str = ", ".join(departments)
     
@@ -165,6 +167,8 @@ def create_user_acknowledgment_email(user_name, document_name, departments):
                 <ul>
                     <li><b>{departments_str}</b></li>
                 </ul>
+                
+                <p><b>Referral ID:</b> {referral_id}</p>
                 
                 <p>The concerned department(s) will review your document and take appropriate action as per the guidelines. You may be contacted for further information if required.</p>
                 
@@ -199,6 +203,10 @@ def send_emails_for_analysis(user_id, document_name, file_path, analysis_results
             print(f"Error parsing analysis results JSON: {e}")
             return False, []
     
+    # Generate a unique referral ID
+    referral_id = str(uuid.uuid4())
+    print(f"Generated Referral ID: {referral_id}")
+    
     # Get unique departments from analysis results
     departments = set(section.get("department") for section in analysis_results if section.get("department"))
     print(f"Detected departments: {departments}")
@@ -222,7 +230,7 @@ def send_emails_for_analysis(user_id, document_name, file_path, analysis_results
         print(f"Department email: {dept_email}")
         
         if dept_email:
-            email_body = create_department_email_body(user_name, document_name, analysis_results, department)
+            email_body = create_department_email_body(user_name, document_name, analysis_results, department, referral_id)
             subject = f"Legal Document Requiring {department} Attention - {document_name}"
             
             try:
@@ -242,7 +250,7 @@ def send_emails_for_analysis(user_id, document_name, file_path, analysis_results
     if user_email and sent_departments:
         try:
             print(f"Sending acknowledgment email to user at {user_email}")
-            ack_email_body = create_user_acknowledgment_email(user_name, document_name, sent_departments)
+            ack_email_body = create_user_acknowledgment_email(user_name, document_name, sent_departments, referral_id)
             subject = f"Document Submission Acknowledgment - {document_name}"
             send_email(user_email, subject, ack_email_body)
         except Exception as e:
