@@ -227,9 +227,11 @@
                             </div>
 
                             <!-- Acknowledge Button -->
+                            {% if not from_history %}
                             <button class="acknowledge-button" onclick="sendAcknowledgment()" {% if not pending_doc_id %}disabled{% endif %}>
                                 Apply
                             </button>
+                            {% endif %}
                         </div>
                     </div>
                     {% endif %}
