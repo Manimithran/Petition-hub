@@ -274,6 +274,48 @@
     "priority": "High",
     "sug_eng": "Conduct an environmental audit, collect evidence of pollution, and prosecute the offenders.",
     "sug_tam": "சுற்றுச்சூழல் தணிக்கை நடத்தவும், மாசுபாட்டின் ஆதாரங்களை சேகரிக்கவும், குற்றவாளிகளுக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "269",
+    "keywords": {
+      "en": ["Negligence", "Infection", "Public Health", "Crime", "Punishment"],
+      "ta": ["அலட்சியம்", "நுண்ணுயிர் தொற்று", "பொது சுகாதாரம்", "குற்றம்", "தண்டனை"]
+    },
+    "desc_eng": "Whoever unlawfully or negligently does any act that is likely to spread infection dangerous to life shall be punished with imprisonment up to 6 months, or with a fine, or both.",
+    "desc_tam": "யாரேனும் உயிருக்கு ஆபத்தான தொற்றை பரப்பக்கூடிய விதமாக சட்டவிரோதமாக அல்லது அலட்சியமாக செயல் ஆற்றினால், அவருக்கு 6 மாதம் வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Environmental Crime",
+    "priority": "High",
+    "sug_eng": "Enforce public health safety measures, conduct medical inspections, and prosecute violators.",
+    "sug_tam": "பொது சுகாதார பாதுகாப்பு நடவடிக்கைகளை அமல்படுத்தவும், மருத்துவ பரிசோதனைகளை நடத்தவும், விதிகளை மீறுவோருக்கு எதிராக வழக்கு தொடரவும்."
+  },
+  {
+    "section": "277",
+    "keywords": {
+      "en": ["Water Pollution", "Public Health", "Contamination", "Crime", "Punishment"],
+      "ta": ["நீர் மாசுபாடு", "பொது சுகாதாரம்", "கழிவுகள்", "குற்றம்", "தண்டனை"]
+    },
+    "desc_eng": "Whoever voluntarily corrupts or fouls the water of any public spring or reservoir shall be punished with imprisonment up to 3 months, or with a fine, or both.",
+    "desc_tam": "யாரேனும் சொந்த நோக்கத்திற்காக பொதுவாக பயன்படுத்தப்படும் ஊற்று அல்லது குளத்தின் நீரை மாசுபடுத்தினால், அவருக்கு 3 மாதம் வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Environmental Crime",
+    "priority": "Medium",
+    "sug_eng": "Monitor water sources, impose strict penalties for contamination, and ensure clean water supply.",
+    "sug_tam": "நீர் ஆதாரங்களை கண்காணிக்கவும், மாசுபடுத்துபவர்களுக்கு கடுமையான தண்டனை விதிக்கவும், தூய்மைமிக்க குடிநீரை வழங்கவும்."
+  },
+  {
+    "section": "284",
+    "keywords": {
+      "en": ["Poison", "Toxic Waste", "Negligence", "Crime", "Punishment"],
+      "ta": ["நச்சு பொருட்கள்", "நச்சு கழிவு", "அலட்சியம்", "குற்றம்", "தண்டனை"]
+    },
+    "desc_eng": "Whoever negligently handles or disposes of any poisonous substance in a manner likely to endanger human life shall be punished with imprisonment up to 6 months, or with a fine, or both.",
+    "desc_tam": "யாரேனும் உயிருக்கு ஆபத்தாக அமைந்த நச்சுப் பொருட்களை அலட்சியமாக கையாளின், அவருக்கு 6 மாதம் வரை சிறைத்தண்டனை அல்லது அபராதம் அல்லது இரண்டும் விதிக்கப்படும்.",
+    "department": "Environmental Crime",
+    "priority": "High",
+    "sug_eng": "Ensure proper disposal of toxic waste, enforce strict regulations, and penalize violations.",
+    "sug_tam": "நச்சுப் பொருட்களை முறையாக அகற்றுவதை உறுதிசெய்யவும், கடுமையான விதிகளை அமல்படுத்தவும், மீறுபவர்களுக்கு தண்டனை விதிக்கவும்."
   }
+  
+  
+  
 
 ]
