@@ -59,6 +59,162 @@
             background-color: #ccc;
             cursor: not-allowed;
         }
+
+        /* Dark mode styles */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --border-color: #ddd;
+            --sidebar-bg: #f8f9fa;
+            --header-bg: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+            --sidebar-bg: #2d2d2d;
+            --header-bg: #2d2d2d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+
+        .sidebar {
+            background-color: var(--sidebar-bg);
+        }
+
+        .top-header {
+            background-color: var(--header-bg);
+        }
+
+        /* Theme switch styles */
+        .theme-switch {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .theme-switch label {
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .theme-switch label:hover {
+            background-color: var(--border-color);
+        }
+
+        .theme-switch i {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        .user-info {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .user-info:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-popup {
+            display: none;
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            min-width: 200px;
+        }
+
+        .popup-content {
+            padding: 15px;
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .popup-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .popup-avatar span {
+            color: white;
+            font-weight: bold;
+        }
+
+        .popup-user-info h3 {
+            margin: 0;
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        .popup-menu {
+            margin-top: 10px;
+        }
+
+        .popup-menu-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .popup-menu-item:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-menu-item i {
+            margin-right: 8px;
+            width: 20px;
+        }
+
+        /* Show popup when active */
+        .profile-popup.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="home-body">
@@ -90,18 +246,39 @@
                     <h1>Petition Analyzer</h1>
                 </div>
                 <div class="user-profile">
-                    <div class="notifications">
-                        <i class="far fa-bell"></i>
-                        <span class="notification-badge">2</span>
+                    <div class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <label for="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
                     </div>
-                    <div class="user-info">
-                        <span class="username">{{ username }}</span>
+                    <div class="user-info" onclick="toggleProfilePopup()">
                         <div class="avatar">
                             <span>{{ username[0] | upper }}</span>
                         </div>
                     </div>
                 </div>
             </header>
+
+            <!-- Profile Popup -->
+            <div id="profilePopup" class="profile-popup">
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="popup-avatar">
+                            <span>{{ username[0] | upper }}</span>
+                        </div>
+                        <div class="popup-user-info">
+                            <h3>{{ username }}</h3>
+                        </div>
+                    </div>
+                    <div class="popup-menu">
+                        <a href="{{ url_for('logout') }}" class="popup-menu-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Dashboard Content -->
             <div class="dashboard">
@@ -249,6 +426,7 @@
         </main>
     </div>
 
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
     <script>
         // File input handling
         const fileInput = document.getElementById('file');
@@ -335,6 +513,21 @@
                 button.textContent = 'Acknowledge'; // Reset button text
             });
         }
+
+        function toggleProfilePopup() {
+            const popup = document.getElementById('profilePopup');
+            popup.classList.toggle('active');
+        }
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(event) {
+            const popup = document.getElementById('profilePopup');
+            const userInfo = document.querySelector('.user-info');
+            
+            if (!popup.contains(event.target) && !userInfo.contains(event.target)) {
+                popup.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
