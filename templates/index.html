@@ -48,6 +48,16 @@
         </div>
     </div>
 
+    <div class="result-container">
+        <h2>Analysis Results</h2>
+        <div id="analysis-results">
+            <!-- Results will be displayed here -->
+        </div>
+        <button id="download-pdf" class="btn btn-primary mt-3" style="display: none;">
+            <i class="fas fa-download"></i> Download PDF Report
+        </button>
+    </div>
+
     <script>
         // Toggle password visibility
         document.querySelector('.toggle-password').addEventListener('click', function() {
@@ -62,6 +72,58 @@
                 passwordInput.type = 'password';
                 icon.classList.remove('fa-eye');
                 icon.classList.add('fa-eye-slash');
+            }
+        });
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('analysis-results');
+            const downloadButton = document.getElementById('download-pdf');
+            
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No analysis results found.</p>';
+                downloadButton.style.display = 'none';
+                return;
+            }
+
+            // Store results for PDF generation
+            window.currentAnalysisResults = results;
+            downloadButton.style.display = 'block';
+
+            // ... rest of the existing displayResults function ...
+        }
+
+        document.getElementById('download-pdf').addEventListener('click', async function() {
+            try {
+                const response = await fetch('/generate_pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        analysis_results: window.currentAnalysisResults,
+                        petition_text: document.getElementById('petition-text').value
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to generate PDF');
+                }
+
+                // Get the blob from the response
+                const blob = await response.blob();
+                
+                // Create a download link
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'petition_analysis_report.pdf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Failed to generate PDF. Please try again.');
             }
         });
     </script>

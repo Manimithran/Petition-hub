@@ -13,6 +13,8 @@ from transformers import BertTokenizer, BertForSequenceClassification
 from langdetect import detect
 from db_connection import check_user_credentials, register_user, initialize_database, save_document_history, get_user_documents, get_document_by_id, get_user_id
 from email_service import send_emails_for_analysis
+from pdf_generator import generate_pdf
+import tempfile
 
 # Download necessary NLTK resources
 nltk.download("punkt")
@@ -191,8 +193,6 @@ def upload():
     # Redirect to the home page with analysis results
     flash("Document analyzed successfully. Please acknowledge to notify departments.", "info")
     return redirect(url_for("home"))
-
-
 
 # app.py (No major changes, just ensure the function call is correct)
 @app.route("/acknowledge", methods=["POST"])
@@ -407,6 +407,31 @@ def login():
 def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
+
+@app.route('/generate_pdf', methods=['POST'])
+def generate_pdf_report():
+    try:
+        # Get the analysis results and petition text from the form data
+        analysis_results = json.loads(request.form.get('analysis_results', '[]'))
+        petition_text = request.form.get('petition_text', '')
+
+        # Create a temporary file for the PDF
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as temp_file:
+            output_path = temp_file.name
+
+        # Generate the PDF
+        generate_pdf(analysis_results, petition_text, output_path)
+
+        # Send the file for download
+        return send_file(
+            output_path,
+            as_attachment=True,
+            download_name='petition_analysis_report.pdf',
+            mimetype='application/pdf'
+        )
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

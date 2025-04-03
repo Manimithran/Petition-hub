@@ -194,6 +194,65 @@
         .profile-popup.active {
             display: block;
         }
+
+        /* Navigation styles */
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #1a237e;  /* Dark navy blue */
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+            margin: 4px 8px;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: rgba(26, 35, 126, 0.1);  /* Light navy blue background on hover */
+        }
+
+        .sidebar-nav a i {
+            margin-right: 12px;
+            color: #1a237e;  /* Dark navy blue for icons */
+        }
+
+        .sidebar-nav li.active a {
+            background-color: rgba(26, 35, 126, 0.15);  /* Slightly darker background for active item */
+            font-weight: 600;
+        }
+
+        /* Update dark mode styles */
+        [data-theme="dark"] .sidebar-nav a {
+            color: #1a237e;  /* Keep dark navy blue in dark mode */
+        }
+
+        [data-theme="dark"] .sidebar-nav a:hover {
+            background-color: rgba(26, 35, 126, 0.1);  /* Light navy blue background on hover in dark mode */
+        }
+
+        [data-theme="dark"] .sidebar-nav a i {
+            color: #1a237e;  /* Keep dark navy blue for icons in dark mode */
+        }
+
+        [data-theme="dark"] .sidebar-nav li.active a {
+            background-color: rgba(26, 35, 126, 0.15);  /* Slightly darker background for active item in dark mode */
+        }
+
+        /* Make sure sidebar background provides good contrast */
+        .sidebar {
+            background-color: #ffffff;  /* White in light mode */
+        }
+
+        [data-theme="dark"] .sidebar {
+            background-color: #f5f5f5;  /* Light gray in dark mode for contrast */
+        }
     </style>
 </head>
 <body class="home-body">
