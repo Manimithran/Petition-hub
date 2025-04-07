@@ -274,58 +274,6 @@
         [data-theme="dark"] .sidebar {
             background-color: #f5f5f5;  /* Light gray in dark mode for contrast */
         }
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.6);
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            
-            
-        }
-        .model-text {
-            color: red; /* Change this to your preferred color */
-            font-size: 16px;
-        }
-
-        .modal-box {
-            background-color: #333;
-            color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgb(2, 2, 2);
-            text-align: center;
-            width: 300px;
-        }
-
-        .modal-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .modal-buttons button {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .modal-buttons button:first-child {
-            background-color: #d9534f;
-            color: #fff;
-        }
-
-        .modal-buttons button:last-child {
-            background-color: #ccc;
-
-            
-        }
     </style>
 </head>
 <body class="home-body">
@@ -340,51 +288,14 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li class="active">
-                        <a href="{{ url_for('home') }}">
-                            <i class="fas fa-file-contract"></i> Petition Analysis
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('history') }}">
-                            <i class="fas fa-history"></i> History
-                        </a>
-                    </li>
+                    <li class="active"><a href="{{ url_for('home') }}"><i class="fas fa-file-contract"></i> Petition Analysis</a></li>
+                    <li><a href="{{ url_for('history') }}"><i class="fas fa-history"></i> History</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
-                <a href="#" onclick="openLogoutModal(); return false;">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
         </aside>
-
-        <!-- Logout Confirmation Modal -->
-        <div id="logoutModal" class="modal-overlay">
-            <div class="modal-box">
-               <p class="modal-text">Are you sure you want to logout?</p>
-                <div class="modal-buttons">
-                    <button onclick="confirmLogout()">Yes</button>
-                    <button onclick="closeLogoutModal()">Cancel</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Script -->
-        <script>
-            function openLogoutModal() {
-                document.getElementById("logoutModal").style.display = "flex";
-            }
-
-            function closeLogoutModal() {
-                document.getElementById("logoutModal").style.display = "none";
-            }
-
-            function confirmLogout() {
-                window.location.href = "{{ url_for('logout') }}";
-            }
-        </script>
-
 
         <!-- Main Content -->
         <main class="main-content">
