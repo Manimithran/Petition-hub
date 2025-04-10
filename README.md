@@ -22,6 +22,5 @@ Langdetect used for detect the language of the petition text.
 
 
 **SYSTEM ARCHITECTURE**
-![petitionHub!] (PetitionHub.png)
 
-
+![PetitionHub](./image/PetitionHub.png)
