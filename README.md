@@ -17,8 +17,11 @@ By leveraging AI, Petition Hub improves efficiency, scalability, and responsiven
 Petition Hub is a web-based platform and easy user interfaces.
 It classifies petition identifies ,urgent cases and then supporting for both English and Tamil petition.
 And also provides the legal suggests to the user, it notify user through email while click on alert button.
- It enhances petition management using AI-based approaches, integrating Flask with machine learning algorithms such as Bidirectional Encoder Representations from Transformers (BERT) for classification, Term Frequency-Inverse Document Frequency (TF-IDF) for keyword extraction, and the Natural Language Toolkit (NLTK) for language processing.
+It enhances petition management using AI-based approaches, integrating Flask with machine learning algorithms such as Bidirectional Encoder Representations from Transformers (BERT) for classification, Term Frequency-Inverse Document Frequency (TF-IDF) for keyword extraction, and the Natural Language Toolkit (NLTK) for language processing.
 Langdetect used for detect the language of the petition text.
 
+
+**SYSTEM ARCHITECTURE**
+![petitionHub!] (PetitionHub.png)
 
 
