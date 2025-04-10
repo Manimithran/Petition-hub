@@ -928,4 +928,55 @@ body {
     }
 }
 
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--table-bg, #ffffff);
+    color: var(--text-color, #333333);
+}
+
+th {
+    background-color: var(--th-bg, #f4f4f4);
+    color: var(--text-color, #333333);
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--border-color, #ddd);
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--border-color, #ddd);
+    background-color: var(--td-bg, #ffffff);
+    color: var(--text-color, #333333);
+}
+
+tr:nth-child(even) {
+    background-color: var(--tr-even-bg, #f9f9f9);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--tr-odd-bg, #ffffff);
+}
+
+/* Dark mode table variables */
+[data-theme="dark"] {
+    --table-bg: #2d2d2d;
+    --th-bg: #1a1a1a;
+    --td-bg: #2d2d2d;
+    --tr-even-bg: #333333;
+    --tr-odd-bg: #2d2d2d;
+}
+
+/* Light mode table variables */
+[data-theme="light"] {
+    --table-bg: #ffffff;
+    --th-bg: #f4f4f4;
+    --td-bg: #ffffff;
+    --tr-even-bg: #f9f9f9;
+    --tr-odd-bg: #ffffff;
+}
+
 

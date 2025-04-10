@@ -102,39 +102,33 @@ function applyDarkTheme() {
         header.style.backgroundColor = '#2d2d2d';
     }
 
-    // Update tables with alternating rows
+    // Update tables
     const tables = document.querySelectorAll('table');
     tables.forEach(table => {
         table.style.backgroundColor = '#2d2d2d';
         table.style.color = '#ffffff';
         
-        // Add styles for alternating rows
-        const style = document.createElement('style');
-        style.textContent = `
-            table tr:nth-child(even) {
-                background-color: #333333 !important;
+        // Update table headers
+        const headers = table.querySelectorAll('th');
+        headers.forEach(header => {
+            header.style.backgroundColor = '#1a1a1a';
+            header.style.color = '#ffffff';
+        });
+        
+        // Update table cells
+        const cells = table.querySelectorAll('td');
+        cells.forEach(cell => {
+            cell.style.backgroundColor = '#2d2d2d';
+            cell.style.color = '#ffffff';
+        });
+        
+        // Add alternating row colors
+        const rows = table.querySelectorAll('tr');
+        rows.forEach((row, index) => {
+            if (index > 0) { // Skip header row
+                row.style.backgroundColor = index % 2 === 0 ? '#2d2d2d' : '#333333';
             }
-            table tr:nth-child(odd) {
-                background-color: #2d2d2d !important;
-            }
-            table tr:hover {
-                background-color: #404040 !important;
-            }
-        `;
-        document.head.appendChild(style);
-    });
-
-    // Update table headers
-    const tableHeaders = document.querySelectorAll('th');
-    tableHeaders.forEach(header => {
-        header.style.backgroundColor = '#1a1a1a';
-        header.style.color = '#ffffff';
-    });
-
-    // Update table cells
-    const tableCells = document.querySelectorAll('td');
-    tableCells.forEach(cell => {
-        cell.style.color = '#ffffff';
+        });
     });
 
     // Update links
@@ -312,19 +306,28 @@ function applyLightTheme() {
     tables.forEach(table => {
         table.style.backgroundColor = '#ffffff';
         table.style.color = '#333333';
-    });
-
-    // Reset table headers
-    const tableHeaders = document.querySelectorAll('th');
-    tableHeaders.forEach(header => {
-        header.style.backgroundColor = '#f4f4f4';
-        header.style.color = '#333333';
-    });
-
-    // Reset table cells
-    const tableCells = document.querySelectorAll('td');
-    tableCells.forEach(cell => {
-        cell.style.color = '#333333';
+        
+        // Reset table headers
+        const headers = table.querySelectorAll('th');
+        headers.forEach(header => {
+            header.style.backgroundColor = '#f4f4f4';
+            header.style.color = '#333333';
+        });
+        
+        // Reset table cells
+        const cells = table.querySelectorAll('td');
+        cells.forEach(cell => {
+            cell.style.backgroundColor = '#ffffff';
+            cell.style.color = '#333333';
+        });
+        
+        // Reset alternating row colors
+        const rows = table.querySelectorAll('tr');
+        rows.forEach((row, index) => {
+            if (index > 0) { // Skip header row
+                row.style.backgroundColor = index % 2 === 0 ? '#ffffff' : '#f9f9f9';
+            }
+        });
     });
 
     // Reset links

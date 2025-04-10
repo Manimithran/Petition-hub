@@ -20,6 +20,16 @@ def create_paragraph_with_style(text, style, is_tamil=False):
         style.fontName = 'Bamini'
         # Convert Unicode Tamil to Bamini encoding
         text = unicode_to_bamini(text)
+    
+    # Remove all special characters and emojis
+    import re
+    # Remove emojis and special characters
+    text = re.sub(r'[^\w\s\u0B80-\u0BFF.,!?;:()\n]', '', text)
+    # Remove multiple spaces
+    text = re.sub(r'\s+', ' ', text)
+    # Remove multiple newlines
+    text = re.sub(r'\n+', '\n', text)
+    
     return Paragraph(text, style)
 
 def generate_pdf(analysis_results, petition_text, output_path):

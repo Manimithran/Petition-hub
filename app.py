@@ -15,6 +15,7 @@ from db_connection import check_user_credentials, register_user, initialize_data
 from email_service import send_emails_for_analysis
 from pdf_generator import generate_pdf
 import tempfile
+import re
 
 # Download necessary NLTK resources
 nltk.download("punkt")
@@ -414,7 +415,17 @@ def generate_pdf_report():
         # Get the analysis results and petition text from the form data
         analysis_results = json.loads(request.form.get('analysis_results', '[]'))
         petition_text = request.form.get('petition_text', '')
-
+        
+        # Clean the petition text
+        # Remove all special characters and emojis
+        petition_text = re.sub(r'[^\w\s\u0B80-\u0BFF.,!?;:()\n]', '', petition_text)
+        # Remove multiple spaces
+        petition_text = re.sub(r'\s+', ' ', petition_text)
+        # Remove multiple newlines
+        petition_text = re.sub(r'\n+', '\n', petition_text)
+        # Strip whitespace
+        petition_text = petition_text.strip()
+        
         # Create a temporary file for the PDF
         with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as temp_file:
             output_path = temp_file.name
